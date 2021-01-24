@@ -4,12 +4,12 @@
   "description": "A minimalist, high-contrast theme inspired by Stoicism",
   "main": "index.js",
   "scripts": {
+    "clean": "rm Stoic.css publish.css",
     "watch:stoic-obsidian": "sass --watch --no-source-map scss/Stoic.scss stoic-theme-design-vault/.obsidian/themes/Stoic.css",
     "watch:stoic-obsidian-publish": "sass --watch --no-source-map scss/StoicPublish.scss stoic-theme-design-vault/publish.css",
-    "build:stoic-obsidian": "sass --no-source-map scss/Stoic.scss build/Stoic.css",
-    "build:stoic-obsidian-publish": "sass --no-source-map scss/StoicPublish.scss build/publish.css",
-    "build": "npm run build:stoic-obsidian && npm run build:stoic-obsidian-publish",
-    "dist": "npm run build && cp build/Stoic.css ../ && cp build/publish.css ../"
+    "build:stoic-obsidian": "sass --no-source-map scss/Stoic.scss Stoic.css",
+    "build:stoic-obsidian-publish": "sass --no-source-map scss/StoicPublish.scss publish.css",
+    "build": "npm run clean && npm run build:stoic-obsidian && npm run build:stoic-obsidian-publish"
   },
   "repository": {
     "type": "git",
