@@ -56,8 +56,9 @@ body .markdown-preview-view h2 {
 }
 body .markdown-preview-view h1 {
   font-family: "Permanent Marker";
-  font-size: 34px;
-  line-height: 40px;
+  font-size: 46px;
+  line-height: 1;
+  margin-bottom: 0.5em;
 }
 body .markdown-preview-view h2 {
   font-family: "Permanent Marker";

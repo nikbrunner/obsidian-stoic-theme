@@ -1,4 +1,4 @@
-$font-size-h1: 34px;
+$font-size-h1: 46px;
 $font-size-h2: 26px;
 $font-size-h3: 22px;
 $font-size-h4: 18px;
@@ -12,7 +12,8 @@ $line-height-text: 1.5em;
 @mixin font-style-h1 {
   font-family: 'Permanent Marker';
   font-size: $font-size-h1;
-  line-height: 40px;
+  line-height: 1;
+  margin-bottom: .5em;
 }
 
 @mixin font-style-h2 {
