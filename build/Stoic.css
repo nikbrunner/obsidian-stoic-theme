@@ -74,11 +74,6 @@ body .markdown-preview-view h3 {
   font-size: 22px;
   font-weight: 500;
 }
-body .markdown-preview-view h4,
-body .markdown-preview-view h5,
-body .markdown-preview-view h6 {
-  text-transform: uppercase;
-}
 body .markdown-preview-view h4 {
   font-size: 18px;
   font-weight: 400;
