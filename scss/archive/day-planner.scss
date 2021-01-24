@@ -1,0 +1,51 @@
+#day-planner-timeline-container {
+  $day-planner-color-time-indicator: var(--github-green);
+  $day-planner-color-time-line: var(--github-blue);
+
+  #now-line {
+    background-color: $day-planner-color-time-indicator;
+    .timeline-time {
+      background-color: $day-planner-color-time-indicator;
+    }
+  }
+
+  #scroll-controls {
+    background-color: var(--background-primary) !important;
+  }
+
+  .aside__line {
+    background-color: $day-planner-color-time-line;
+  }
+
+  .event_item {
+    background-color: var(--background-primary);
+
+    * {
+      color: var(--text-normal);
+    }
+
+    &:hover {
+      box-shadow: none;
+      background-color: var(--text-selection);
+    }
+
+    .ei_Dot {
+      &.dot_active {
+        background-color: $day-planner-color-time-indicator;
+      }
+    }
+
+    .ei_Copy {
+      display: block;
+    }
+
+    .ei_Title {
+      font-weight: bold;
+
+      &::before {
+        content: '⌚️';
+        margin-right: 0.25rem;
+      }
+    }
+  }
+}

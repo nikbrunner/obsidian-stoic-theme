@@ -1,0 +1,257 @@
+@import 'mixins';
+@import 'vars';
+
+body {
+  &.minimal-theme {
+    // Calendar
+    #calendar-container {
+      .month,
+      .title {
+        font-size: 24px;
+      }
+
+      .year {
+        color: var(--text-accent);
+        font-weight: 900;
+        font-family: $font-family-header;
+      }
+
+      tr td.today {
+        color: var(--text-accent);
+      }
+
+      .has-note {
+        color: var(--text-accent);
+      }
+    }
+
+    // Override global custom properties for "hue" and "saturation"
+    // to set different accents for light/dark mode
+    &.theme-light {
+      --accent-h: 205;
+      --accent-s: 75%;
+      --accent-l: 45%;
+      --background-secondary: $github-white-secondary;
+
+      .CodeMirror-activeline {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      .internal-embed .markdown-embed {
+        background: var(--text-selection);
+      }
+    }
+
+    &.theme-dark {
+      --accent-h: 212;
+      --accent-s: 100%;
+      --accent-l: 67%;
+      --text-accent: #{$github-blue};
+      --text-normal: #{$github-white};
+      --background-primary: #{$github-dark};
+      --background-secondary: #{$github-dark};
+      --background-tertiary: #{$github-dark-bright};
+
+      .CodeMirror-activeline {
+        background: rgba(0, 0, 0, 0.15);
+      }
+
+      .cm-s-obsidian span.cm-inline-code {
+        color: $github-red;
+      }
+
+      .internal-embed .markdown-embed {
+        background: var(--background-tertiary);
+      }
+    }
+
+    .jl.popover {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      background: var(--background-primary);
+      border-color: var(--text-accent);
+      color: var(--text-accent);
+    }
+
+    // Forgot what this does
+    .nav-file.is-active > .nav-file-title {
+      background: var(--text-selection);
+    }
+
+    // Add padding to the tag widget
+    .tag-container {
+      padding-left: 20px;
+
+      .tree-item-flair {
+        background: var(--background-primary);
+      }
+    }
+
+    .markdown-preview-view {
+      h1,
+      h2,
+      h3 {
+        a.tag {
+          font-size: inherit;
+          border: none;
+        }
+      }
+
+      h1 {
+        font-size: 32px;
+        font-family: $font-family-header;
+      }
+
+      h2 {
+        font-size: 24px;
+        padding-bottom: 0.35em;
+        margin-bottom: 0.35em;
+        border-bottom: $border-bottom-thiccness solid $github-white;
+      }
+
+      h3 {
+        font-size: 18px;
+        margin-bottom: 0.25em;
+      }
+
+      // Correct code vertical positioning
+      code {
+        position: relative;
+        bottom: 1px;
+        color: $github-red;
+      }
+
+      // Blockquote
+      blockquote {
+        background: var(--text-selection);
+        border-left: none;
+        padding: $padding-block;
+        margin: 1em 0;
+        border-radius: $border-radius;
+        color: var(--text-normal);
+      }
+
+      pre {
+        margin: $space-m 0;
+        padding: $padding-block;
+        border-radius: $border-radius;
+
+        @media screen {
+          box-shadow: $box-shadow;
+        }
+      }
+
+      .internal-link {
+        @include style-internal-link();
+      }
+
+      .copy-code-button {
+        border-radius: 0 $border-radius 0 $border-radius;
+      }
+
+      // Modify look of embedded decoration
+      .markdown-embed {
+        margin-top: 1em;
+        padding: $padding-block;
+        border-radius: $border-radius;
+        border-left: 1px solid transparent;
+
+        // Hide embedded file names
+        div.markdown-embed-title {
+          display: none;
+        }
+      }
+
+      // Correct internal link position
+      div.markdown-embed-link svg {
+        position: relative;
+        top: 0.5rem;
+        right: 0.5rem;
+      }
+
+      // Task lists
+      ul.contains-task-list {
+        margin-top: 0;
+
+        .task-list-item {
+          .task-list-item-checkbox {
+            position: relative;
+            top: 7px;
+
+            &:checked {
+              border: 1px solid $github-green-bright;
+              background-color: $github-green !important;
+            }
+          }
+
+          li {
+            margin-bottom: 0.25em;
+
+            &:first-of-type {
+              margin-top: 0.25em;
+            }
+          }
+        }
+      }
+
+      // Fix pane width
+      &.is-readable-line-width .markdown-preview-sizer {
+        width: var(--line-width);
+        max-width: var(--max-width);
+      }
+    }
+
+    // Background for relative line-numbers
+    .markdown-source-view {
+      .cm-s-obsidian {
+        // Correct linenumber vertical positioning
+        .CodeMirror-linenumber {
+          background-color: var(--background-primary);
+          padding-top: 3px;
+        }
+      }
+    }
+  }
+
+  // Sliding Panes
+  // Add a colored border to the active pane
+  &.plugin-sliding-panes-rotate-header .workspace > .mod-root {
+    .workspace-leaf.mod-active {
+      box-shadow: -5px 0 15px 0 rgba(0, 0, 0, 0.15) !important;
+      border-left: 3px solid var(--text-accent);
+      opacity: 1;
+
+      h1 {
+        transition: all 0.25s ease-in-out;
+        color: var(--text-accent);
+      }
+
+      h2 {
+        transition: all 0.25s ease-in-out;
+      }
+
+      .view-header-title {
+        color: var(--text-accent);
+      }
+
+      // Change file title and icon color for active pane
+      .view-header-icon {
+        color: var(--text-accent);
+        opacity: 1;
+      }
+    }
+
+    // Correct title position in sliding panes
+    .view-header-title-container {
+      padding-left: 5px;
+    }
+  }
+
+  // Add a box-shadow to the panes and a border
+  &.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
+  &.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
+    box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.15) !important;
+    border-left: 3px solid var(--background-primary);
+    transition: all 0.125s ease-in-out;
+    opacity: 0.975;
+  }
+}

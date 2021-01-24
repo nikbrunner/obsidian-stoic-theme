@@ -1,0 +1,18 @@
+@import './Stoic.scss';
+
+body {
+  .render-container {
+    .publish-renderer {
+      opacity: 0.95;
+
+      .extra-title {
+        opacity: 1;
+        color: var(--text-normal);
+
+        &:hover {
+          color: var(--text-accent);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "obsidian-stoic-theme",
+  "version": "0.0.1",
+  "description": "A minimalist, high-contrast theme inspired by Stoicism",
+  "main": "index.js",
+  "scripts": {
+    "watch:stoic-obsidian": "sass --watch --no-source-map scss/Stoic.scss stoic-theme-design-vault/.obsidian/themes/Stoic.css",
+    "watch:stoic-obsidian-publish": "sass --watch --no-source-map scss/StoicPublish.scss stoic-theme-design-vault/publish.css",
+    "build:stoic-obsidian": "sass --no-source-map scss/Stoic.scss Stoic.css",
+    "build:stoic-obsidian-publish": "sass --no-source-map scss/StoicPublish.scss publish.css",
+    "build": "npm run build:stoic-obsidian && npm run build:stoic-obsidian-publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikbrunner/obsidian-stoic-theme.git"
+  },
+  "keywords": [
+    "obsidian",
+    "theme"
+  ],
+  "author": "nibru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikbrunner/obsidian-stoic-theme/issues"
+  },
+  "homepage": "https://github.com/nikbrunner/obsidian-stoic-theme#readme",
+  "dependencies": {
+    "sass": "^1.32.5"
+  }
+}

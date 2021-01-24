@@ -1,0 +1,73 @@
+body .markdown-preview-view.book {
+  font-family: 'Lora' !important;
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4em !important;
+  }
+
+  h2 {
+    font-size: 3em !important;
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+    padding-bottom: 1em;
+  }
+
+  h3 {
+    font-size: 2em !important;
+    margin-top: 1em !important;
+    margin-bottom: 1.5em !important;
+  }
+
+  h4 {
+    font-size: 1.5em !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 1em !important;
+  }
+
+  p {
+    line-height: 1.65;
+    font-size: 1em;
+    padding-bottom: 0.5em;
+    text-align: justify;
+  }
+
+  blockquote {
+    padding: 1em !important;
+    color: gray !important;
+
+    p:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
+  ul.contains-task-list {
+    margin: 1em 0;
+  }
+
+  .frontmatter-container {
+    display: none;
+  }
+
+  .markdown-embed {
+    h1 {
+      font-size: 3rem !important;
+    }
+  }
+
+  .internal-embed .markdown-embed {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: var(--background-primary) !important;
+    box-shadow: none;
+
+    .markdown-preview-sizer {
+      max-width: none;
+    }
+  }
+}

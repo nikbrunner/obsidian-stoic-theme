@@ -2,3 +2,7 @@
 *.css.map
 *.sass.map
 *.scss.map
+node_modules/
+
+# Obsidian Designn Vault
+stoic-theme-design-vault/.obsidian/themes/Atom.css
