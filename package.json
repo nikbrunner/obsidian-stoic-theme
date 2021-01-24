@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/nikbrunner/obsidian-stoic-theme#readme",
   "dependencies": {
+    "prettier": "^2.2.1",
     "sass": "^1.32.5"
   }
 }
