@@ -171,11 +171,19 @@ body {
       background: rgba(27, 31, 35, 0.05);
       font-family: var(--font-monospace);
       color: var(--text-accent);
-      border-radius: 6px;
+      border-radius: 3px;
+      text-decoration: none;
     }
   }
 
   &.theme-light {
+    // TODO Remove after variable cleanup
+    .cm-hashtag,
+    .tag {
+      background: $color-black;
+      color: $color-white;
+    }
+
     :not(pre) > code[class*='language-'],
     pre[class*='language-'] {
       background: var(--background-primary);
