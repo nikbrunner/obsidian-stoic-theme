@@ -2,9 +2,13 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+.DS_Store
+
 node_modules/
 
 # Obsidian Designn Vault
+stoic-theme-design-vault/.obsidian/plugins
 stoic-theme-design-vault/.obsidian/themes/Atom.css
 stoic-theme-design-vault/.obsidian/themes/Stoic.css
 stoic-theme-design-vault/publish.css
