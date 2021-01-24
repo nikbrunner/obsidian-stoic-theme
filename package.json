@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf build/",
-    "watch:stoic": "sass --watch --no-source-map scss/Stoic.scss stoic-theme-design-vault/.obsidian/themes/Stoic.css",
-    "watch:stoic-publish": "sass --watch --no-source-map scss/StoicPublish.scss stoic-theme-design-vault/publish.css",
-    "build:stoic": "sass --no-source-map scss/Stoic.scss build/Stoic.css",
-    "build:stoic-publish": "sass --no-source-map scss/StoicPublish.scss build/publish.css",
+    "watch:stoic": "sass --watch --no-source-map src/Stoic.scss stoic-theme-design-vault/.obsidian/themes/Stoic.css",
+    "watch:stoic-publish": "sass --watch --no-source-map src/StoicPublish.scss stoic-theme-design-vault/publish.css",
+    "build:stoic": "sass --no-source-map src/Stoic.scss build/Stoic.css",
+    "build:stoic-publish": "sass --no-source-map src/StoicPublish.scss build/publish.css",
     "build": "npm run build:stoic && npm run build:stoic-publish",
     "dist": "sh dist.sh"
   },
