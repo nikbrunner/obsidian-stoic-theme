@@ -6,6 +6,17 @@
       {
         "id": "49a986b6bf1044c2",
         "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Example Sheet 2.md",
+            "mode": "preview"
+          }
+        }
+      },
+      {
+        "id": "36a9e5dbe8d59412",
+        "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
@@ -77,6 +88,14 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "075b560f9509c97f",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
         ]
       }
@@ -86,7 +105,9 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Untitled.md",
-    "Example Sheet.md"
+    "Example Sheet 3.md",
+    "Example Sheet 2.md",
+    "Example Sheet.md",
+    "Untitled.md"
   ]
 }
