@@ -10,7 +10,7 @@
     "build:stoic": "sass --no-source-map scss/Stoic.scss build/Stoic.css",
     "build:stoic-publish": "sass --no-source-map scss/StoicPublish.scss build/publish.css",
     "build": "npm run build:stoic && npm run build:stoic-publish",
-    "dist": "npm run clean && npm run build && cp build/Stoic.css ../ && cp build/publish.css ../ && git commit -am \"Updates\" && git push"
+    "dist": "sh dist.sh"
   },
   "repository": {
     "type": "git",

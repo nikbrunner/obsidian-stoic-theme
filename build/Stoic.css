@@ -75,7 +75,7 @@ body .markdown-preview-view h3 {
   font-weight: 500;
 }
 body .markdown-preview-view h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 body .markdown-preview-view h5,
@@ -83,10 +83,10 @@ body .markdown-preview-view h6 {
   font-weight: 300;
 }
 body .markdown-preview-view h5 {
-  font-size: 16px;
+  font-size: 14px;
 }
 body .markdown-preview-view h6 {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--text-muted);
 }
 body .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox {
