@@ -31,12 +31,14 @@ body .markdown-preview-view li {
   font-size: 14px;
   line-height: 1.5em;
 }
+
 body .markdown-source-view {
   font-family: "SF Mono", monospace;
 }
 body .markdown-source-view .cm-s-obsidian pre.HyperMD-list-line {
   padding-top: 0;
 }
+
 body .markdown-preview-view {
   padding: 20px 75px 50px;
 }
@@ -141,24 +143,16 @@ body .markdown-preview-view .tag {
   border-radius: 3px;
   text-decoration: none;
 }
-body.theme-light .cm-hashtag,
-body.theme-light .tag {
-  background: #000000;
-  color: #ffffff;
-}
-body.theme-light :not(pre) > code[class*=language-],
-body.theme-light pre[class*=language-] {
+body .markdown-preview-view :not(pre) > code[class*=language-],
+body .markdown-preview-view pre[class*=language-] {
   background: var(--background-primary);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
   padding: calc((1rem * 2) * 1);
   scrollbar-width: none;
 }
-body.theme-light :not(pre) > code[class*=language-]::-webkit-scrollbar,
-body.theme-light pre[class*=language-]::-webkit-scrollbar {
-  display: none;
-}
-body .site-footer {
+body .markdown-preview-view :not(pre) > code[class*=language-]::-webkit-scrollbar,
+body .markdown-preview-view pre[class*=language-]::-webkit-scrollbar {
   display: none;
 }
 
@@ -171,4 +165,7 @@ body .render-container .publish-renderer .extra-title {
 }
 body .render-container .publish-renderer .extra-title:hover {
   color: var(--text-accent);
+}
+body .site-footer {
+  display: none;
 }
