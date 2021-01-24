@@ -1,0 +1,10 @@
+// @import '../vars/'
+
+
+body .markdown-source-view {
+  font-family: 'SF Mono', monospace; 
+
+  .cm-s-obsidian pre.HyperMD-list-line {
+    padding-top: 0;
+  }
+}

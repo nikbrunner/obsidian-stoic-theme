@@ -1,0 +1,86 @@
+@import 'vars';
+
+// TODO Sassize
+.modal.mod-settings {
+  max-width: 50vw;
+}
+
+.cm-fat-cursor .CodeMirror-cursor {
+  background: rgba(107, 248, 149, 0.65);
+  z-index: 9999;
+  width: 0.5em;
+}
+
+.CodeMirror-activeline {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Tags in EditMode radius */
+span.cm-hashtag.cm-hashtag-begin {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+span.cm-hashtag.cm-hashtag-end {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.cm-s-obsidian span.cm-hashtag,
+.tag {
+  font-weight: normal;
+  font-size: 11px;
+  padding: 0px 5px 1px;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  top: -1px;
+  background: rgba(27, 31, 35, 0.05);
+  font-family: var(--font-monospace);
+  color: var(--text-accent);
+  border-radius: 6px;
+}
+
+body {
+  .markdown-preview-view {
+    input[type='checkbox'] {
+      border-radius: 3px !important;
+    }
+  }
+
+  .popover,
+  .popover.hover-popover {
+    min-height: initial;
+  }
+}
+
+/* Toggle Indicator positioning */
+.markdown-preview-view ul > li.task-list-item .collapse-indicator {
+  margin-left: -50px;
+}
+
+/* Habit Tracker */
+.markdown-preview-view.habit-tracker * {
+  white-space: nowrap;
+}
+
+/* Active File Reveal Effect */
+.is-flashing {
+  box-shadow: none;
+  background-color: initial;
+
+  .nav-file-title.is-active {
+    background-color: var(--text-selection) !important;
+    color: $github-blue;
+    transition: all 500ms ease-in-out;
+  }
+}
+
+/* Add Shadow to the side panes */
+.mod-right:not(.is-collapsed) ~ .workspace-split.mod-right-split,
+.app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split,
+.app-container.is-right-sidedock-collapsed
+  .workspace-split.mod-right-split {
+  box-shadow: $box-shadow;
+  z-index: 2;
+}
