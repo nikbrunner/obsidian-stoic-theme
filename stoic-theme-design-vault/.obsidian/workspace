@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Example Sheet 3.md",
+            "file": "Business Letter.md",
             "mode": "preview"
           }
         }
@@ -106,8 +106,9 @@
   },
   "lastOpenFiles": [
     "Example Sheet 2.md",
+    "Business Letter.md",
+    "Untitled.md",
     "Example Sheet 3.md",
-    "Example Sheet.md",
-    "Untitled.md"
+    "Example Sheet.md"
   ]
 }

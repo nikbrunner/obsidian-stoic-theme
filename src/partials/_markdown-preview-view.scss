@@ -6,7 +6,7 @@ body .markdown-preview-view {
   }
 
   &.book {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
     blockquote,
     code,
@@ -17,41 +17,39 @@ body .markdown-preview-view {
     }
   }
 
-  h1,
-  h2 {
-    font-weight: 600;
-  }
-
   h1 {
-    @include font-style-h1();
+    @include font-style-h1('preview');
   }
 
   h2 {
-    @include font-style-h2();
+    @include font-style-h2('preview');
   }
 
   h3 {
-    font-size: $font-size-h3;
-    font-weight: 500;
+    @include font-style-h3('preview');
   }
 
   h4 {
-    font-size: $font-size-h4;
-    font-weight: 400;
-  }
-
-  h5,
-  h6 {
-    font-weight: 300;
+    @include font-style-h4('preview');
   }
 
   h5 {
-    font-size: $font-size-h5;
+    @include font-style-h5('preview');
   }
 
   h6 {
-    font-size: $font-size-h6;
-    color: var(--text-muted);
+    @include font-style-h6('preview');
+  }
+
+  blockquote,
+  pre,
+  code,
+  p,
+  span,
+  li {
+    font-size: $font-size-text;
+    line-height: $line-height-text;
+    font-family: $font-preview-text;
   }
 
   ul {
@@ -87,7 +85,7 @@ body .markdown-preview-view {
   }
 
   blockquote,
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     margin: $space-l 0;
   }
 
@@ -111,8 +109,8 @@ body .markdown-preview-view {
     text-decoration: none;
   }
 
-  :not(pre) > code[class*="language-"],
-  pre[class*="language-"] {
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
     background: var(--background-primary);
     box-shadow: $box-shadow;
     border-radius: $border-radius;

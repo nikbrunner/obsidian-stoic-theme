@@ -1,4 +1,10 @@
-$font-size-h1: 46px;
+$font-preview-header: 'Coustard', sans-serif;
+$font-preview-text: 'Work Sans', -apple-system, Segoe UI, sans-serif;
+$font-editor-header: 'SF Mono', monospace;
+$font-editor-text: 'SF Mono', monospace;
+$font-code: 'SF Mono', monospace;
+
+$font-size-h1: 32px;
 $font-size-h2: 26px;
 $font-size-h3: 22px;
 $font-size-h4: 16px;
@@ -7,20 +13,95 @@ $font-size-h6: 10px;
 $font-size-text: 14px;
 $font-size-text--book: 18px;
 $font-size-tag: 12px;
-$line-height-text: 1.5em;
 
-@mixin font-style-h1 {
-  font-family: 'Permanent Marker';
+$line-height-header: 1;
+$line-height-text: 1.5;
+
+@mixin font-style-h1($view) {
+  @if $view == 'preview' {
+    font-family: $font-preview-header;
+  } @else if $view == 'editor' {
+    font-family: $font-editor-header;
+  }
+
   font-size: $font-size-h1;
-  line-height: 1;
-  margin-bottom: .5em;
+  font-weight: 700;
+  line-height: $line-height-header;
+  margin-bottom: 0.5em;
+
+  @content;
 }
 
-@mixin font-style-h2 {
-  font-family: 'Permanent Marker';
-  border-bottom: 1px dashed var(--text-normal);
+@mixin font-style-h2($view) {
+  @if $view == 'preview' {
+    font-family: $font-preview-header;
+  } @else if $view == 'editor' {
+    font-family: $font-editor-header;
+  }
+
   font-size: $font-size-h2;
+  font-weight: 600;
+  border-bottom: 1px dashed var(--text-normal);
   padding-bottom: 0.25em;
+  margin-bottom: 0.5em;
+
+  @content;
+}
+
+@mixin font-style-h3($view) {
+  @if $view == 'preview' {
+    font-family: $font-preview-text;
+  } @else if $view == 'editor' {
+    font-family: $font-editor-header;
+  }
+
+  font-size: $font-size-h3;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+
+  @content;
+}
+
+@mixin font-style-h4($view) {
+  @if $view == 'preview' {
+    font-family: $font-preview-text;
+  } @else if $view == 'editor' {
+    font-family: $font-editor-header;
+  }
+
+  font-size: $font-size-h4;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+
+  @content;
+}
+
+@mixin font-style-h5($view) {
+  @if $view == 'preview' {
+    font-family: $font-preview-text;
+  } @else if $view == 'editor' {
+    font-family: $font-editor-header;
+  }
+
+  font-size: $font-size-h5;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+
+  @content;
+}
+
+@mixin font-style-h6($view) {
+  @if $view == 'preview' {
+    font-family: $font-preview-text;
+  } @else if $view == 'editor' {
+    font-family: $font-editor-header;
+  }
+
+  font-size: $font-size-h6;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+
+  @content;
 }
 
 @mixin style-internal-link() {
