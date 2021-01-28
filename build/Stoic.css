@@ -113,6 +113,9 @@ body .markdown-preview-view li {
   line-height: 1.5;
 }
 
+body .markdown-source-view {
+  font-family: "SF Mono", monospace;
+}
 body .markdown-source-view .cm-s-obsidian pre.HyperMD-list-line {
   padding-top: 0;
 }
