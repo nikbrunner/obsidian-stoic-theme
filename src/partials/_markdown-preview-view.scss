@@ -117,6 +117,10 @@ body .markdown-preview-view {
     padding: $space-l;
     scrollbar-width: none;
 
+    @media print {
+      box-shadow: none;
+    }
+
     &::-webkit-scrollbar {
       display: none;
     }

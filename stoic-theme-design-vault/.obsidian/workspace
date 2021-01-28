@@ -6,7 +6,6 @@
       {
         "id": "49a986b6bf1044c2",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -18,6 +17,7 @@
       {
         "id": "36a9e5dbe8d59412",
         "type": "leaf",
+        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -80,7 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Example Sheet 3.md",
+                "file": "Business Letter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,10 +105,10 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Business Letter.md",
     "Example Sheet 3.md",
     "Example Sheet.md",
     "Example Sheet 2.md",
-    "Business Letter.md",
     "Untitled.md"
   ]
 }

@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 body {
-  --default-font: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --default-font: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --mermaid-font: var(--default-font);
+  --reveal-font: var(--default-font);
+  --font-monospace: "Source Code Pro", monospace;
 }
 
 .theme-dark {
@@ -135,14 +138,14 @@ body .markdown-preview-view.book li {
   font-size: 18px;
 }
 body .markdown-preview-view h1 {
-  font-family: "Coustard", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, "Coustard", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 1;
   margin-bottom: 0.5em;
 }
 body .markdown-preview-view h2 {
-  font-family: "Coustard", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, "Coustard", sans-serif;
   font-size: 26px;
   font-weight: 600;
   border-bottom: 1px dashed var(--text-normal);
@@ -150,25 +153,25 @@ body .markdown-preview-view h2 {
   margin-bottom: 0.5em;
 }
 body .markdown-preview-view h3 {
-  font-family: "Work Sans", -apple-system, Segoe UI, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 0.5em;
 }
 body .markdown-preview-view h4 {
-  font-family: "Work Sans", -apple-system, Segoe UI, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 0.5em;
 }
 body .markdown-preview-view h5 {
-  font-family: "Work Sans", -apple-system, Segoe UI, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 0.5em;
 }
 body .markdown-preview-view h6 {
-  font-family: "Work Sans", -apple-system, Segoe UI, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 10px;
   font-weight: 500;
   margin-bottom: 0.5em;
@@ -181,7 +184,7 @@ body .markdown-preview-view span,
 body .markdown-preview-view li {
   font-size: 14px;
   line-height: 1.5;
-  font-family: "Work Sans", -apple-system, Segoe UI, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 body .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox {
   border-radius: 3px;
@@ -238,6 +241,12 @@ body .markdown-preview-view pre[class*=language-] {
   border-radius: 15px;
   padding: calc((1rem * 2) * 1);
   scrollbar-width: none;
+}
+@media print {
+  body .markdown-preview-view :not(pre) > code[class*=language-],
+body .markdown-preview-view pre[class*=language-] {
+    box-shadow: none;
+  }
 }
 body .markdown-preview-view :not(pre) > code[class*=language-]::-webkit-scrollbar,
 body .markdown-preview-view pre[class*=language-]::-webkit-scrollbar {
