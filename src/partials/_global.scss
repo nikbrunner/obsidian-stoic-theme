@@ -1,12 +1,46 @@
-body .markdown-source-view,
-body .markdown-preview-view {
-  blockquote,
-  pre,
-  code,
-  p,
-  span,
-  li {
-    font-size: $font-size-text;
-    line-height: $line-height-text;
+body {
+  &.plugin-sliding-panes-rotate-header div.workspace > .mod-root {
+    & > .workspace-leaf {
+      & > .workspace-leaf-content {
+        .view-header {
+          & > .view-header-title-container {
+            &::before {
+              background: transparent;
+            }
+            &::after {
+              background: transparent;
+            }
+          }
+        }
+      }
+
+      &.mod-active {
+        & > .workspace-leaf-content {
+          & > .view-header {
+            & > .view-header-title-container {
+              &::before {
+                background: transparent;
+              }
+              &::after {
+                background: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .markdown-source-view,
+  .markdown-preview-view {
+    blockquote,
+    pre,
+    code,
+    p,
+    span,
+    li {
+      font-size: $font-size-text;
+      line-height: $line-height-text;
+    }
   }
 }
