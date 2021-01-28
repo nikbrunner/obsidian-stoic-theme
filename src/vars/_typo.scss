@@ -1,10 +1,13 @@
 $font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
-$font-preview-header: $font-default, 'Coustard', sans-serif;
+$font-preview-header: 'Permanent Marker', 'Coustard', sans-serif;
 $font-preview-text: $font-default;
 $font-editor-header: 'SF Mono', monospace;
 $font-editor-text: 'SF Mono', monospace;
 $font-code: 'SF Mono', monospace;
+
+// Styles
+$font-preview-book: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 $font-size-h1: 32px;
 $font-size-h2: 26px;

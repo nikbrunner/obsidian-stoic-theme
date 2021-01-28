@@ -7,17 +7,5 @@ $trans-fast: 0.25ms;
 $trans-base: 0.5ms;
 $trans-long: 0.75ms;
 
-$space: 1rem;
-$space-expansion: 1;
-
-$font-family-header: 'Coustard';
 $padding-block: 2em;
 
-$space-xxs: calc((#{$space} / 8) * #{$space-expansion});
-$space-xs: calc((#{$space} / 4) * #{$space-expansion});
-$space-s: calc((#{$space} / 2) * #{$space-expansion});
-$space-m: calc(#{$space} * #{$space-expansion});
-$space-l: calc((#{$space} * 2) * #{$space-expansion});
-$space-xl: calc((#{$space} * 4) * #{$space-expansion});
-$space-xxl: calc((#{$space} * 8) * #{$space-expansion});
-$space-xxxl: calc((#{$space} * 12) * #{$space-expansion});

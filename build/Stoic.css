@@ -8,8 +8,8 @@ body {
 }
 
 .theme-dark {
-  --background-primary: #0d1117;
-  --background-primary-alt: #13181f;
+  --background-primary: #000000;
+  --background-primary-alt: #000000;
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;
   --background-accent: #000;
@@ -53,7 +53,7 @@ body {
 }
 
 .theme-light {
-  --background-primary: #fafafa;
+  --background-primary: #ffffff;
   --background-primary-alt: #eaeaeb;
   --background-secondary: #eaeaeb;
   --background-secondary-alt: #dbdbdc;
@@ -113,21 +113,25 @@ body .markdown-preview-view li {
   line-height: 1.5;
 }
 
-body .markdown-source-view {
-  font-family: "SF Mono", monospace;
-}
 body .markdown-source-view .cm-s-obsidian pre.HyperMD-list-line {
   padding-top: 0;
 }
 
+body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content .view-header {
+  border-right: 2px solid transparent;
+  border-left: 2px solid #000000;
+  background: var(--background-primary);
+}
+body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+  border-right: 2px solid transparent;
+  border-left: 2px solid #000000;
+  background: var(--background-primary);
+}
 body .markdown-preview-view {
   padding: 20px 75px 50px;
 }
 body .markdown-preview-view .page-header {
   display: none;
-}
-body .markdown-preview-view.book {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 body .markdown-preview-view.book blockquote,
 body .markdown-preview-view.book code,
@@ -135,16 +139,17 @@ body .markdown-preview-view.book p,
 body .markdown-preview-view.book li {
   line-height: 1.5;
   font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 body .markdown-preview-view h1 {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, "Coustard", sans-serif;
+  font-family: "Permanent Marker", "Coustard", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 1;
   margin-bottom: 0.5em;
 }
 body .markdown-preview-view h2 {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, "Coustard", sans-serif;
+  font-family: "Permanent Marker", "Coustard", sans-serif;
   font-size: 26px;
   font-weight: 600;
   border-bottom: 1px dashed var(--text-normal);
@@ -197,12 +202,12 @@ body .markdown-preview-view code {
   line-height: 1.25em;
 }
 body .markdown-preview-view blockquote {
-  background: var(--text-selection);
-  border-left: none;
-  padding: 2em;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  background: #000000;
+  color: #ffffff;
+  padding: calc((1rem * 2) * 1);
   margin: 1em 0;
   border-radius: 15px;
-  color: var(--text-normal);
   border: none;
 }
 body .markdown-preview-view blockquote,

@@ -25,6 +25,10 @@ test.. test... test..... test?..... test!....
 
 !!!!!! ???? ,,  -- ---
 
+-   
+
+* 
+
 "Smartypants, double quotes" and 'single quotes'
 
 
@@ -43,6 +47,7 @@ _This is italic text_
 
 ## Blockquotes
 
+> Blockquotes can also be nested...
 
 > Blockquotes can also be nested...
 >> ...by using additional greater-than signs right next to each other...
