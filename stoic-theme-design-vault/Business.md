@@ -42,7 +42,7 @@ Nikolaus Brunner
 
 ## Meine Daten
 
-```yaml
+```
 Name:            Nikolaus Wolfram Brunner
 Telefon:         0176 24 33 0932
 E-Mail:          nikolaus.brunner@protonmail.ch

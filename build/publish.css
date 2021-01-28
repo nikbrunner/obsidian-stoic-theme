@@ -98,11 +98,21 @@ body {
   --orange: #986800;
 }
 
+body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content .view-header {
+  border-right: 2px solid transparent;
+  border-left: 2px solid var(--background-primary);
+  background: var(--background-primary);
+}
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content .view-header > .view-header-title-container::before {
   background: transparent;
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content .view-header > .view-header-title-container::after {
   background: transparent;
+}
+body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+  border-right: 2px solid transparent;
+  border-left: 2px solid #000000;
+  background: var(--background-primary);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container::before {
   background: transparent;
@@ -260,6 +270,7 @@ body .workspace .markdown-preview-view .tag {
 body .workspace .markdown-preview-view :not(pre) > code[class*=language-],
 body .workspace .markdown-preview-view pre[class*=language-] {
   background: var(--background-primary);
+  color: inherit;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   padding: calc((1rem * 2) * 1);

@@ -140,6 +140,7 @@ body {
       :not(pre) > code[class*="language-"],
       pre[class*="language-"] {
         background: var(--background-primary);
+        color: inherit;
         box-shadow: $box-shadow;
         border-radius: $border-radius;
         padding: $space-l;

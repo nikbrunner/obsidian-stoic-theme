@@ -1,8 +1,14 @@
 body {
+  // Sliding panes
+  //body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header
   &.plugin-sliding-panes-rotate-header div.workspace > .mod-root {
     & > .workspace-leaf {
       & > .workspace-leaf-content {
         .view-header {
+          border-right: 2px solid transparent;
+          border-left: 2px solid var(--background-primary);
+          background: var(--background-primary);
+
           & > .view-header-title-container {
             &::before {
               background: transparent;
@@ -18,6 +24,10 @@ body {
       &.mod-active {
         & > .workspace-leaf-content {
           & > .view-header {
+            border-right: 2px solid transparent;
+            border-left: 2px solid $color-black;
+            background: var(--background-primary);
+
             & > .view-header-title-container {
               &::before {
                 background: transparent;
