@@ -10,8 +10,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Business.md",
-            "mode": "source"
+            "file": "Code.md",
+            "mode": "preview"
           }
         }
       },
@@ -80,7 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Business.md",
+                "file": "Code.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,12 +105,12 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Untitled.md",
     "Business.md",
     "Example Sheet 3.md",
     "Example Sheet 2.md",
     "Example Sheet.md",
     "Business Letter 1.md",
-    "Business Letter.md",
-    "Untitled.md"
+    "Business Letter.md"
   ]
 }

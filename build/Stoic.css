@@ -225,7 +225,7 @@ body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .ta
 body .workspace .markdown-preview-view ul li:first-of-type {
   margin-top: 0.25em;
 }
-body .workspace .markdown-preview-view code {
+body .workspace .markdown-preview-view code:not([class*=language-]) {
   color: #ffffff;
   line-height: 1.25em;
 }

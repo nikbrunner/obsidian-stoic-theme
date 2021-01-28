@@ -97,7 +97,7 @@ body {
         }
       }
 
-      code {
+      code:not([class*="language-"]) {
         color: $color-white;
         line-height: 1.25em;
       }
