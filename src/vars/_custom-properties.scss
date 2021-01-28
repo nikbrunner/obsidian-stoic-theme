@@ -15,7 +15,7 @@ body {
 
 .theme-dark {
   --background-primary: #{$color-black};
-  --background-primary-alt: #{$color-black};
+  --background-primary-alt: #{$color-white};
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;
   --background-accent: #000;
@@ -61,7 +61,7 @@ body {
 
 .theme-light {
   --background-primary: #{$color-white};
-  --background-primary-alt: #eaeaeb;
+  --background-primary-alt: #{$color-black};
   --background-secondary: #eaeaeb;
   --background-secondary-alt: #dbdbdc;
   --background-accent: #fff;
@@ -76,7 +76,7 @@ body {
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: #{$github-blue};
   --text-accent-hover: #{$github-blue-bright};
-  --text-normal: #383a42;
+  --text-normal: #{$color-black};
   --text-muted: #8e8e90;
   --text-faint: #999999;
   --text-error: #e75545;
