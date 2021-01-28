@@ -4,7 +4,7 @@ body {
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
-  --font-monospace: "Source Code Pro", monospace;
+  --font-monospace: SF Mono, monospace, monospace;
 }
 
 .theme-dark {
@@ -208,11 +208,11 @@ body .workspace .markdown-preview-view h6 {
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view blockquote,
-body .workspace .markdown-preview-view pre,
+body .workspace .markdown-preview-view pre:not([class*=language-]),
 body .workspace .markdown-preview-view code,
 body .workspace .markdown-preview-view p,
 body .workspace .markdown-preview-view span,
-body .workspace .markdown-preview-view li {
+body .workspace .markdown-preview-view li:not(.token) {
   font-size: 14px;
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
@@ -241,6 +241,7 @@ body .workspace .markdown-preview-view blockquote {
 body .workspace .markdown-preview-view blockquote,
 body .workspace .markdown-preview-view pre[class*=language-] {
   margin: calc((1rem * 2) * 1) 0;
+  font-family: var(--font-monospace);
 }
 body .workspace .markdown-preview-view .internal-link {
   transition: all 0.5ms ease-in-out;

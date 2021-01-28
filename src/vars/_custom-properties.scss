@@ -8,7 +8,7 @@ body {
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
-  --font-monospace: "Source Code Pro", monospace;
+  --font-monospace: #{$font-editor-text}, monospace;
 }
 
 // Overwrite theme CSS variables

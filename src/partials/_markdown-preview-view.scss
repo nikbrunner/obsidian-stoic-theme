@@ -69,11 +69,11 @@ body {
       }
 
       blockquote,
-      pre,
+      pre:not([class*="language-"]),
       code,
       p,
       span,
-      li {
+      li:not(.token) {
         font-size: $font-size-text;
         line-height: $line-height-text;
         font-family: $font-preview-text;
@@ -115,6 +115,7 @@ body {
       blockquote,
       pre[class*="language-"] {
         margin: $space-l 0;
+        font-family: var(--font-monospace);
       }
 
       .internal-link {
