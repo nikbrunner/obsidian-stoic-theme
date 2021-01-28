@@ -9,21 +9,10 @@ body {
 }
 
 // Overwrite theme CSS variables
+
 .theme-dark {
-  --text-accent: #{$github-green};
-  --text-accent-hover: #{$github-green-bright};
   --background-primary: #{$github-dark};
   --background-primary-alt: #{$github-dark-bright};
-}
-
-.theme-light {
-  --text-accent: #{$github-blue};
-  --text-accent-hover: #{$github-blue-bright};
-}
-
-.theme-dark {
-  --background-primary: #272b34;
-  --background-primary-alt: #20242b;
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;
   --background-accent: #000;
@@ -36,8 +25,8 @@ body {
   --background-modifier-error-rgb: 61, 0, 0;
   --background-modifier-error-hover: #470000;
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
-  --text-accent: #61afef;
-  --text-accent-hover: #69bafd;
+  --text-accent: #{$github-green};
+  --text-accent-hover: #{$github-green-bright};
   --text-normal: #dcddde;
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
@@ -82,8 +71,8 @@ body {
   --background-modifier-error-rgb: 230, 135, 135;
   --background-modifier-error-hover: #ff9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
-  --text-accent: #1592ff;
-  --text-accent-hover: #2d9dff;
+  --text-accent: #{$github-blue};
+  --text-accent-hover: #{$github-blue-bright};
   --text-normal: #383a42;
   --text-muted: #8e8e90;
   --text-faint: #999999;
