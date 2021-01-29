@@ -87,9 +87,7 @@
   }
 
   &:hover {
-    &::before {
-      color: var(--text-accent);
-    }
+    opacity: 0.75;
   }
 }
 
@@ -101,5 +99,41 @@
 
   &:hover {
     opacity: 0.75;
+  }
+}
+
+@mixin style-checkbox() {
+  $checkbox-size: 14px;
+  $checkbox-radius: 0px;
+
+  border-radius: $checkbox-radius;
+  top: 4px;
+  filter: none;
+  position: relative;
+  appearance: none;
+  transition: all $trans-base ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: $checkbox-radius;
+    background: var(--background-primary);
+    border: 1px solid var(--background-primary-alt);
+    width: $checkbox-size;
+    height: $checkbox-size;
+  }
+
+  &:checked {
+    &::after {
+      content: "✗";
+      background: var(--background-primary-alt);
+      color: white;
+      line-height: $checkbox-size;
+      text-align: center;
+    }
   }
 }

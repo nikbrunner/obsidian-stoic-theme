@@ -72,6 +72,7 @@ Mainly just **Black** and **White**. I am really considering not to use one colo
 
 - The *minimal* theme is doing cool thing, where the theme hase a accompining plugin, where it is possible to change variables for the theme.
 - Documented, optional css classes like `book` which people can use
+- This is a #hashtag
 
 ## Roadmap
 

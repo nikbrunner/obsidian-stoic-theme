@@ -5,10 +5,12 @@ body {
   --default-font: "Helvetica", -apple-system, BlinkMacSystemFont, Segoe UI,
     Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --font-monospace: "JetBrains Mono", monospace;
+  --font-sans: var(--default-font), sans-serif;
+  --font-serif: "Lora", serif;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
-  --font-sans: var(--default-font), sans-serif;
-  --font-serif: "Cambria", serif;
+  --font-preview: var(--font-sans);
+  --font-editor: var(--font-monospace);
   --font-size-h1: 32px;
   --font-size-h2: 26px;
   --font-size-h3: 22px;
@@ -16,7 +18,7 @@ body {
   --font-size-h5: 14px;
   --font-size-h6: 10px;
   --font-size-text: 14px;
-  --font-size-text--book: 18px;
+  --font-size-text--book: 16px;
   --font-size-tag: 12px;
   --font-size-inline-code: 12px;
   --line-height-header: 1;
@@ -152,26 +154,14 @@ body .markdown-preview-view li {
 }
 
 body .markdown-source-view {
-  font-family: var(--font-mono);
+  font-family: var(--font-monospace);
 }
 body .markdown-source-view .cm-s-obsidian pre.HyperMD-list-line {
   padding-top: 0;
 }
 
-body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content .view-header {
-  border-right: 2px solid transparent;
-  background: var(--background-primary);
-}
-body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
-  border-right: 2px solid transparent;
-  border-left: 2px solid #000000;
-  background: var(--background-primary);
-}
 body .workspace .workspace-leaf-resize-handle {
   background: var(--background-primary);
-}
-body .workspace .markdown-preview-view {
-  padding: 20px 75px 50px;
 }
 body .workspace .markdown-preview-view .page-header {
   display: none;
@@ -230,10 +220,37 @@ body .workspace .markdown-preview-view li {
   line-height: var(--line-height-text);
   font-family: var(--font-sans);
 }
+body .workspace .markdown-preview-view ul.contains-task-list {
+  margin-top: 0;
+  padding-inline-start: 30px;
+}
 body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox {
-  border-radius: 3px;
-  top: 3px;
+  border-radius: 0px;
+  top: 4px;
   filter: none;
+  position: relative;
+  appearance: none;
+  transition: all 0.5s ease-in-out;
+}
+body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0px;
+  background: var(--background-primary);
+  border: 1px solid var(--background-primary-alt);
+  width: 14px;
+  height: 14px;
+}
+body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox:checked::after {
+  content: "✗";
+  background: var(--background-primary-alt);
+  color: white;
+  line-height: 14px;
+  text-align: center;
 }
 body .workspace .markdown-preview-view ul li:first-of-type {
   margin-top: 0.25em;
@@ -246,12 +263,11 @@ body .workspace .markdown-preview-view code:not([class*=language-]) {
   padding: 1px 4px 2px;
 }
 body .workspace .markdown-preview-view blockquote {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   background: #000000;
   color: #ffffff;
   padding: calc(1rem * 1) calc((1rem * 2) * 1);
   margin: 1em 0;
-  border-radius: 0.25rem;
+  border-radius: 0;
   border: none;
 }
 body .workspace .markdown-preview-view .internal-link {
@@ -267,8 +283,8 @@ body .workspace .markdown-preview-view .internal-link::before {
   margin-right: 0.05em;
   transform: rotate(40deg);
 }
-body .workspace .markdown-preview-view .internal-link:hover::before {
-  color: var(--text-accent);
+body .workspace .markdown-preview-view .internal-link:hover {
+  opacity: 0.75;
 }
 body .workspace .markdown-preview-view .external-link {
   transition: all 0.15s ease-in-out;
@@ -298,7 +314,7 @@ body .workspace .markdown-preview-view pre[class*=language-] {
   background: var(--background-primary);
   color: inherit;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  border-radius: 0;
   padding: calc((1rem * 2) * 1);
   scrollbar-width: none;
 }
