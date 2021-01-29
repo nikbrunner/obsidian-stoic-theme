@@ -1,5 +1,5 @@
 body .markdown-source-view {
-  font-family: $font-editor-text;
+  font-family: var(--font-mono);
 
   .cm-s-obsidian pre.HyperMD-list-line {
     padding-top: 0;

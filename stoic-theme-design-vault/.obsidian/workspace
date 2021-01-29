@@ -6,11 +6,22 @@
       {
         "id": "49a986b6bf1044c2",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
             "file": "Code.md",
+            "mode": "preview"
+          }
+        }
+      },
+      {
+        "id": "7d2d6a94942b3b26",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Example Sheet 3.md",
             "mode": "preview"
           }
         }
@@ -64,7 +75,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "46ae8f49bfdaa5e7",
@@ -80,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Code.md",
+                "file": "Example Sheet 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,11 +117,12 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Untitled.md",
-    "Business.md",
     "Example Sheet 3.md",
+    "Code.md",
     "Example Sheet 2.md",
     "Example Sheet.md",
+    "Untitled.md",
+    "Business.md",
     "Business Letter 1.md",
     "Business Letter.md"
   ]

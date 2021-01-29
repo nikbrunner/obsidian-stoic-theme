@@ -26,11 +26,15 @@ In continuation of the idea I also got the idea for a **plugin**.
 
 ## Todo
 
+This is an internal link to [[Code]]
+
 ### General
 
 - [x] Formulate, brainstorm and carve out thoungts from the voice recordings
 - [x] Read official information from [[Obsidian]] about contributing themes
 - [x] Plan out tools
+- [ ] Resolve `archive`
+- [ ] Resolve `archive`
 - [ ] Resolve `archive`
 
 ### Research

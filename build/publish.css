@@ -1,11 +1,26 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 body {
-  --default-font: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --default-font: "Helvetica", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-monospace: "JetBrains Mono", monospace;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
-  --font-monospace: SF Mono, monospace, monospace;
+  --font-sans: var(--default-font), sans-serif;
+  --font-serif: "Cambria", serif;
+  --font-size-h1: 32px;
+  --font-size-h2: 26px;
+  --font-size-h3: 22px;
+  --font-size-h4: 16px;
+  --font-size-h5: 14px;
+  --font-size-h6: 10px;
+  --font-size-text: 14px;
+  --font-size-text--book: 18px;
+  --font-size-tag: 12px;
+  --font-size-inline-code: 12px;
+  --line-height-header: 1;
+  --line-height-text: 1.5;
 }
 
 .theme-dark {
@@ -132,12 +147,12 @@ body .markdown-preview-view code,
 body .markdown-preview-view p,
 body .markdown-preview-view span,
 body .markdown-preview-view li {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-text);
 }
 
 body .markdown-source-view {
-  font-family: "SF Mono", monospace;
+  font-family: var(--font-mono);
 }
 body .markdown-source-view .cm-s-obsidian pre.HyperMD-list-line {
   padding-top: 0;
@@ -165,58 +180,55 @@ body .workspace .markdown-preview-view.book blockquote,
 body .workspace .markdown-preview-view.book code,
 body .workspace .markdown-preview-view.book p,
 body .workspace .markdown-preview-view.book li {
-  line-height: 1.5;
-  font-size: 18px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: var(--line-height-text);
+  font-size: var(--font-size-text--book);
+  font-family: var(--font-serif);
 }
 body .workspace .markdown-preview-view h1 {
-  font-family: "Permanent Marker", "Coustard", sans-serif;
-  font-size: 32px;
+  font-family: var(--default-font);
+  font-size: var(--font-size-h1);
   font-weight: 700;
-  line-height: 1;
+  line-height: var(--line-height-header);
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view h2 {
-  font-family: "Permanent Marker", "Coustard", sans-serif;
-  font-size: 26px;
+  font-family: var(--default-font);
+  font-size: var(--font-size-h2);
   font-weight: 600;
-  border-bottom: 1px dashed var(--text-normal);
+  border-bottom: 1px solid var(--text-normal);
   padding-bottom: 0.25em;
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view h3 {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 22px;
+  font-family: var(--default-font);
+  font-size: var(--font-size-h3);
   font-weight: 600;
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view h4 {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 16px;
+  font-family: var(--default-font);
+  font-size: var(--font-size-h4);
   font-weight: 500;
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view h5 {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 14px;
+  font-family: var(--default-font);
+  font-size: var(--font-size-h5);
   font-weight: 500;
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view h6 {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 10px;
+  font-family: var(--default-font);
+  font-size: var(--font-size-h6);
   font-weight: 500;
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view blockquote,
-body .workspace .markdown-preview-view pre:not([class*=language-]),
-body .workspace .markdown-preview-view code,
 body .workspace .markdown-preview-view p,
-body .workspace .markdown-preview-view span,
-body .workspace .markdown-preview-view li:not(.token) {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+body .workspace .markdown-preview-view li {
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-text);
+  font-family: var(--font-sans);
 }
 body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox {
   border-radius: 3px;
@@ -227,39 +239,52 @@ body .workspace .markdown-preview-view ul li:first-of-type {
   margin-top: 0.25em;
 }
 body .workspace .markdown-preview-view code:not([class*=language-]) {
+  font-size: var(--font-size-inline-code);
+  font-family: var(--font-monospace);
   color: #ffffff;
   line-height: 1.25em;
+  padding: 1px 4px 2px;
 }
 body .workspace .markdown-preview-view blockquote {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   background: #000000;
   color: #ffffff;
-  padding: calc((1rem * 2) * 1) calc((1rem * 2) * 1);
+  padding: calc(1rem * 1) calc((1rem * 2) * 1);
   margin: 1em 0;
-  border-radius: 3px;
+  border-radius: 0.25rem;
   border: none;
 }
-body .workspace .markdown-preview-view blockquote,
-body .workspace .markdown-preview-view pre[class*=language-] {
-  margin: calc((1rem * 2) * 1) 0;
-  font-family: var(--font-monospace);
-}
 body .workspace .markdown-preview-view .internal-link {
-  transition: all 0.5ms ease-in-out;
+  transition: all 0.15s ease-in-out;
   text-decoration: none;
+  font-weight: bold;
+  color: var(--text-normal);
 }
-body .workspace .markdown-preview-view .internal-link:hover {
-  background: var(--text-selection);
+body .workspace .markdown-preview-view .internal-link::before {
+  content: "❝";
+  font-size: 1.15em;
+  line-height: 1;
+  margin-right: 0.05em;
+  transform: rotate(40deg);
+}
+body .workspace .markdown-preview-view .internal-link:hover::before {
   color: var(--text-accent);
-  border-bottom: 1px solid var(--text-accent);
+}
+body .workspace .markdown-preview-view .external-link {
+  transition: all 0.15s ease-in-out;
+  color: var(--text-normal);
+  background-image: none;
+}
+body .workspace .markdown-preview-view .external-link:hover {
+  opacity: 0.75;
 }
 body .workspace .markdown-preview-view .cm-hashtag,
 body .workspace .markdown-preview-view .tag {
   background: var(--background-primary-alt);
   color: #ffffff;
-  font-size: 12px;
+  font-size: var(--font-size-tag);
   font-weight: normal;
-  padding: calc((1rem / 4) * 1) calc((1rem / 2) * 1);
+  padding: 1px 4px 2px;
   margin-top: 0;
   margin-bottom: 0;
   position: relative;
@@ -273,7 +298,7 @@ body .workspace .markdown-preview-view pre[class*=language-] {
   background: var(--background-primary);
   color: inherit;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
+  border-radius: 0.25rem;
   padding: calc((1rem * 2) * 1);
   scrollbar-width: none;
 }
@@ -286,6 +311,9 @@ body .workspace .markdown-preview-view pre[class*=language-] {
 body .workspace .markdown-preview-view :not(pre) > code[class*=language-]::-webkit-scrollbar,
 body .workspace .markdown-preview-view pre[class*=language-]::-webkit-scrollbar {
   display: none;
+}
+body .workspace .markdown-preview-view .frontmatter-container {
+  background: var(--background-primary);
 }
 
 body .render-container .publish-renderer {

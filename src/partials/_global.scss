@@ -51,8 +51,8 @@ body {
     p,
     span,
     li {
-      font-size: $font-size-text;
-      line-height: $line-height-text;
+      font-size: var(--font-size-text);
+      line-height: var(--line-height-text);
     }
   }
 }

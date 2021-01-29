@@ -1,11 +1,7 @@
-$border-radius: 3px;
-$border-bottom-thiccness: 1px;
+$border-radius: 0.25rem;
 
 $box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 
-$trans-fast: 0.25ms;
-$trans-base: 0.5ms;
-$trans-long: 0.75ms;
-
-$padding-block: 2em;
-
+$trans-fast: 0.15s;
+$trans-base: 0.5s;
+$trans-slow: 1s;

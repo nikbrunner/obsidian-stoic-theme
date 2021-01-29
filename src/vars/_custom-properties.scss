@@ -1,18 +1,33 @@
-@import "mixins";
-@import "typo";
-@import "vars";
-@import "colors";
+@import 'mixins';
+@import 'typo';
+@import 'vars';
+@import 'colors';
 
 body {
-  --default-font: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --default-font: 'Helvetica', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-monospace: 'JetBrains Mono', monospace;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
-  --font-monospace: #{$font-editor-text}, monospace;
+  --font-sans: var(--default-font), sans-serif;
+  --font-serif: 'Cambria', serif;
+
+  --font-size-h1: 32px;
+  --font-size-h2: 26px;
+  --font-size-h3: 22px;
+  --font-size-h4: 16px;
+  --font-size-h5: 14px;
+  --font-size-h6: 10px;
+  --font-size-text: 14px;
+  --font-size-text--book: 18px;
+  --font-size-tag: 12px;
+  --font-size-inline-code: 12px;
+
+  --line-height-header: 1;
+  --line-height-text: 1.5;
 }
 
 // Overwrite theme CSS variables
-
 .theme-dark {
   --background-primary: #{$color-black};
   --background-primary-alt: #{$color-white};

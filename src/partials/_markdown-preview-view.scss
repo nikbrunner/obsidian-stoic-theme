@@ -1,25 +1,25 @@
 body {
-    // Sliding panes
-    //body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header
-    &.plugin-sliding-panes-rotate-header div.workspace > .mod-root {
-      & > .workspace-leaf {
-        & > .workspace-leaf-content {
-          .view-header {
-            border-right: 2px solid transparent;
-            background: var(--background-primary);
-          }
+  // Sliding panes
+  //body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header
+  &.plugin-sliding-panes-rotate-header div.workspace > .mod-root {
+    & > .workspace-leaf {
+      & > .workspace-leaf-content {
+        .view-header {
+          border-right: 2px solid transparent;
+          background: var(--background-primary);
         }
-        &.mod-active {
-          & > .workspace-leaf-content {
-            & > .view-header {
-              border-right: 2px solid transparent;
-              border-left: 2px solid $color-black;
-              background: var(--background-primary);
-            }
+      }
+      &.mod-active {
+        & > .workspace-leaf-content {
+          & > .view-header {
+            border-right: 2px solid transparent;
+            border-left: 2px solid $color-black;
+            background: var(--background-primary);
           }
         }
       }
     }
+  }
 
   .workspace {
     .workspace-leaf-resize-handle {
@@ -38,45 +38,42 @@ body {
         code,
         p,
         li {
-          line-height: $line-height-text;
-          font-size: $font-size-text--book;
-          font-family: $font-preview-book;
+          line-height: var(--line-height-text);
+          font-size: var(--font-size-text--book);
+          font-family: var(--font-serif);
         }
       }
 
       h1 {
-        @include font-style-h1("preview");
+        @include font-style-h1('preview');
       }
 
       h2 {
-        @include font-style-h2("preview");
+        @include font-style-h2('preview');
       }
 
       h3 {
-        @include font-style-h3("preview");
+        @include font-style-h3('preview');
       }
 
       h4 {
-        @include font-style-h4("preview");
+        @include font-style-h4('preview');
       }
 
       h5 {
-        @include font-style-h5("preview");
+        @include font-style-h5('preview');
       }
 
       h6 {
-        @include font-style-h6("preview");
+        @include font-style-h6('preview');
       }
 
       blockquote,
-      pre:not([class*="language-"]),
-      code,
       p,
-      span,
-      li:not(.token) {
-        font-size: $font-size-text;
-        line-height: $line-height-text;
-        font-family: $font-preview-text;
+      li {
+        font-size: var(--font-size-text);
+        line-height: var(--line-height-text);
+        font-family: var(--font-sans);
       }
 
       ul {
@@ -97,38 +94,39 @@ body {
         }
       }
 
-      code:not([class*="language-"]) {
+      code:not([class*='language-']) {
+        font-size: var(--font-size-inline-code);
+        font-family: var(--font-monospace);
         color: $color-white;
         line-height: 1.25em;
+        padding: 1px 4px 2px;
       }
 
       blockquote {
         box-shadow: $box-shadow;
         background: $color-black;
         color: $color-white;
-        padding: $space-l $space-l;
+        padding: $space-m $space-l;
         margin: 1em 0;
         border-radius: $border-radius;
         border: none;
-      }
-
-      blockquote,
-      pre[class*="language-"] {
-        margin: $space-l 0;
-        font-family: var(--font-monospace);
       }
 
       .internal-link {
         @include style-internal-link();
       }
 
+      .external-link {
+        @include style-external-link();
+      }
+
       .cm-hashtag,
       .tag {
         background: var(--background-primary-alt);
         color: $color-white;
-        font-size: $font-size-tag;
+        font-size: var(--font-size-tag);
         font-weight: normal;
-        padding: $space-xs $space-s;
+        padding: 1px 4px 2px;
         margin-top: 0;
         margin-bottom: 0;
         position: relative;
@@ -138,8 +136,8 @@ body {
         text-decoration: none;
       }
 
-      :not(pre) > code[class*="language-"],
-      pre[class*="language-"] {
+      :not(pre) > code[class*='language-'],
+      pre[class*='language-'] {
         background: var(--background-primary);
         color: inherit;
         box-shadow: $box-shadow;
@@ -154,6 +152,10 @@ body {
         &::-webkit-scrollbar {
           display: none;
         }
+      }
+
+      .frontmatter-container {
+        background: var(--background-primary);
       }
     }
   }

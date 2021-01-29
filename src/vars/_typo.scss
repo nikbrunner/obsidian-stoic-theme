@@ -1,52 +1,30 @@
-$font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
-$font-preview-header: 'Permanent Marker', 'Coustard', sans-serif;
-$font-preview-text: $font-default;
-$font-editor-header: 'SF Mono', monospace;
-$font-editor-text: 'SF Mono', monospace;
-$font-code: 'SF Mono', monospace;
-
-// Styles
-$font-preview-book: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-$font-size-h1: 32px;
-$font-size-h2: 26px;
-$font-size-h3: 22px;
-$font-size-h4: 16px;
-$font-size-h5: 14px;
-$font-size-h6: 10px;
-$font-size-text: 14px;
-$font-size-text--book: 18px;
-$font-size-tag: 12px;
-
-$line-height-header: 1;
-$line-height-text: 1.5;
+@mixin font-family-header($view) {
+  @if $view == "preview" {
+    font-family: var(--default-font);
+  } @else if $view == "editor" {
+    font-family: var(--font-mono);
+  } @else if $view == "book" {
+    font-family: var(--font-sans);
+  }
+}
 
 @mixin font-style-h1($view) {
-  @if $view == 'preview' {
-    font-family: $font-preview-header;
-  } @else if $view == 'editor' {
-    font-family: $font-editor-header;
-  }
+  @include font-family-header($view);
 
-  font-size: $font-size-h1;
+  font-size: var(--font-size-h1);
   font-weight: 700;
-  line-height: $line-height-header;
+  line-height: var(--line-height-header);
   margin-bottom: 0.5em;
 
   @content;
 }
 
 @mixin font-style-h2($view) {
-  @if $view == 'preview' {
-    font-family: $font-preview-header;
-  } @else if $view == 'editor' {
-    font-family: $font-editor-header;
-  }
+  @include font-family-header($view);
 
-  font-size: $font-size-h2;
+  font-size: var(--font-size-h2);
   font-weight: 600;
-  border-bottom: 1px dashed var(--text-normal);
+  border-bottom: 1px solid var(--text-normal);
   padding-bottom: 0.25em;
   margin-bottom: 0.5em;
 
@@ -54,13 +32,9 @@ $line-height-text: 1.5;
 }
 
 @mixin font-style-h3($view) {
-  @if $view == 'preview' {
-    font-family: $font-preview-text;
-  } @else if $view == 'editor' {
-    font-family: $font-editor-header;
-  }
+  @include font-family-header($view);
 
-  font-size: $font-size-h3;
+  font-size: var(--font-size-h3);
   font-weight: 600;
   margin-bottom: 0.5em;
 
@@ -68,13 +42,9 @@ $line-height-text: 1.5;
 }
 
 @mixin font-style-h4($view) {
-  @if $view == 'preview' {
-    font-family: $font-preview-text;
-  } @else if $view == 'editor' {
-    font-family: $font-editor-header;
-  }
+  @include font-family-header($view);
 
-  font-size: $font-size-h4;
+  font-size: var(--font-size-h4);
   font-weight: 500;
   margin-bottom: 0.5em;
 
@@ -82,13 +52,9 @@ $line-height-text: 1.5;
 }
 
 @mixin font-style-h5($view) {
-  @if $view == 'preview' {
-    font-family: $font-preview-text;
-  } @else if $view == 'editor' {
-    font-family: $font-editor-header;
-  }
+  @include font-family-header($view);
 
-  font-size: $font-size-h5;
+  font-size: var(--font-size-h5);
   font-weight: 500;
   margin-bottom: 0.5em;
 
@@ -96,26 +62,44 @@ $line-height-text: 1.5;
 }
 
 @mixin font-style-h6($view) {
-  @if $view == 'preview' {
-    font-family: $font-preview-text;
-  } @else if $view == 'editor' {
-    font-family: $font-editor-header;
-  }
+  @include font-family-header($view);
 
-  font-size: $font-size-h6;
+  font-size: var(--font-size-h6);
   font-weight: 500;
   margin-bottom: 0.5em;
 
   @content;
 }
 
+// TODO Improve Styling
 @mixin style-internal-link() {
-  transition: all $trans-base ease-in-out;
+  transition: all $trans-fast ease-in-out;
   text-decoration: none;
+  font-weight: bold;
+  color: var(--text-normal);
+
+  &::before {
+    content: "❝";
+    font-size: 1.15em;
+    line-height: 1;
+    margin-right: 0.05em;
+    transform: rotate(40deg);
+  }
 
   &:hover {
-    background: var(--text-selection);
-    color: var(--text-accent);
-    border-bottom: 1px solid var(--text-accent);
+    &::before {
+      color: var(--text-accent);
+    }
+  }
+}
+
+// TODO Improve Styling
+@mixin style-external-link() {
+  transition: all $trans-fast ease-in-out;
+  color: var(--text-normal);
+  background-image: none;
+
+  &:hover {
+    opacity: 0.75;
   }
 }
