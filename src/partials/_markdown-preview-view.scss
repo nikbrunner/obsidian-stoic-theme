@@ -13,27 +13,27 @@ body {
 
       &.book {
         h1 {
-          @include font-style-h1("book");
+          @include font-style-h1('book');
         }
 
         h2 {
-          @include font-style-h2("book");
+          @include font-style-h2('book');
         }
 
         h3 {
-          @include font-style-h3("book");
+          @include font-style-h3('book');
         }
 
         h4 {
-          @include font-style-h4("book");
+          @include font-style-h4('book');
         }
 
         h5 {
-          @include font-style-h5("book");
+          @include font-style-h5('book');
         }
 
         h6 {
-          @include font-style-h6("book");
+          @include font-style-h6('book');
         }
 
         blockquote,
@@ -47,27 +47,27 @@ body {
       }
 
       h1 {
-        @include font-style-h1("preview");
+        @include font-style-h1('preview');
       }
 
       h2 {
-        @include font-style-h2("preview");
+        @include font-style-h2('preview');
       }
 
       h3 {
-        @include font-style-h3("preview");
+        @include font-style-h3('preview');
       }
 
       h4 {
-        @include font-style-h4("preview");
+        @include font-style-h4('preview');
       }
 
       h5 {
-        @include font-style-h5("preview");
+        @include font-style-h5('preview');
       }
 
       h6 {
-        @include font-style-h6("preview");
+        @include font-style-h6('preview');
       }
 
       p {
@@ -97,7 +97,7 @@ body {
         }
       }
 
-      code:not([class*="language-"]) {
+      code:not([class*='language-']) {
         @include style-inline-code();
       }
 
@@ -108,7 +108,6 @@ body {
       .internal-link {
         @include style-internal-link();
       }
-
       .external-link {
         @include style-external-link();
       }
@@ -118,8 +117,8 @@ body {
         @include style-tag();
       }
 
-      :not(pre) > code[class*="language-"],
-      pre[class*="language-"] {
+      :not(pre) > code[class*='language-'],
+      pre[class*='language-'] {
         background: var(--background-primary);
         color: inherit;
         box-shadow: $box-shadow;

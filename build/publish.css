@@ -302,9 +302,10 @@ body .workspace .markdown-preview-view ul li:first-of-type {
   margin-top: 0.25em;
 }
 body .workspace .markdown-preview-view code:not([class*=language-]) {
-  font-size: inherit;
+  background: var(--background-primary);
+  color: var(--text-normal);
   font-family: var(--font-monospace);
-  color: #ffffff;
+  font-size: inherit;
   line-height: 1.25em;
   padding: 1px 4px 1px;
   position: relative;

@@ -20,8 +20,7 @@ let NERDTreeUseTCD =  0
 let NERDTreeGitStatusUseNerdFonts = "0"
 let NERDTreeMapToggleFilters = "f"
 let NERDTreeMapPreview = "go"
-let NERDTreeCascadeSingleChildDir =  1 
-let Taboo_tabs = "1	Stoic\n2	Global\n3	Source View\n4	Preview View\n5	Vars\n"
+let Taboo_tabs = "1	Stoic\n2	Global\n3	Source View\n4	Preview View\n5	Compiled\n"
 let NERDTreeNotificationThreshold =  100 
 let NERDTreeMapActivateNode = "o"
 let NERDTreeMapCustomOpen = "<CR>"
@@ -44,8 +43,8 @@ let NERDTreeGitStatusWithFlags =  1
 let NERDTreeAutoCenterThreshold =  3 
 let NERDTreeShowFiles =  1 
 let NERDTreeGitStatusEnable = "1"
-let NERDTreeMapOpenSplit = "i"
 let NERDTreeGitStatusUpdateOnCursorHold = "1"
+let NERDTreeDirArrowCollapsible = "▾"
 let NERDTreeCaseSensitiveSort =  0 
 let NERDTreeHijackNetrw =  1 
 let NERDTreeShowLineNumbers =  0 
@@ -56,7 +55,6 @@ let NERDTreeRespectWildIgnore =  0
 let NERDTreeGitStatusAlignIfConceal = "1"
 let NERDTreeMapCWD = "CD"
 let NERDTreeNaturalSort =  0 
-let NERDTreeMenuDown = "j"
 let NERDTreeMapToggleBookmarks = "B"
 let NERDTreeMapUpdir = "u"
 let NERDTreeMapJumpRoot = "P"
@@ -74,22 +72,24 @@ let NERDTreeMapJumpLastChild = "J"
 let NTGitWorkdir = "/Users/nibru/Documents/dev/repositories/own/obsidian-stoic-theme"
 let NERDTreeMapDeleteBookmark = "D"
 let NERDTreeGitStatusUntrackedFilesMode = "normal"
-let NERDTreeMapUpdirKeepOpen = "U"
 let NERDTreeMapJumpNextSibling = "<C-j>"
 let NERDTreeCopyCmd = "cp -r "
 let NERDTreeMapQuit = "q"
 let NERDTreeMapChangeRoot = "C"
 let NERDTreeSortDirs =  1 
+let NERDTreeMapOpenSplit = "i"
 let NERDTreeMapToggleFiles = "F"
 let NERDTreeGitStatusNodeColorization =  1 
 let NERDTreeGitStatusMapPrevHunk = "[c"
 let NERDTreeMapOpenExpl = "e"
 let NERDTreeMapJumpFirstChild = "K"
 let NERDTreeGlyphReadOnly = "RO"
-let NERDTreeDirArrowCollapsible = "▾"
+let NERDTreeCascadeSingleChildDir =  1 
 let NERDTreeMapOpenRecursively = "O"
 let NERDTreeGitStatusDirDirtyOnly = "1"
 let NERDTreeGitStatusUpdateOnWrite = "1"
+let NERDTreeMenuDown = "j"
+let NERDTreeMapUpdirKeepOpen = "U"
 let NERDTreeQuitOnOpen =  0 
 let NERDTreeGitStatusMapNextHunk = "]c"
 let NERDTreeMapToggleHidden = "I"
@@ -99,22 +99,19 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 src/partials/_global.scss
-badd +0 src/partials/_markdown-source-view.scss
-badd +0 src/partials/_markdown-preview-view.scss
+badd +1 src/partials/_global.scss
+badd +1 src/partials/_markdown-source-view.scss
+badd +1 src/partials/_markdown-preview-view.scss
 badd +1 src/vars/_typo.scss
-badd +0 src/vars/_colors.scss
+badd +1 src/vars/_colors.scss
+badd +6 src/vars/_custom-properties.scss
+badd +5 package.json
+badd +0 stoic-theme-design-vault/.obsidian/themes/Stoic.css
 argglobal
 %argdel
-$argadd .
+$argadd ./
 set stal=2
-set splitbelow splitright
-wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-tabedit src/vars/_typo.scss
+edit src/vars/_typo.scss
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -125,7 +122,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-wincmd =
+exe 'vert 1resize ' . ((&columns * 209 + 209) / 419)
+exe 'vert 2resize ' . ((&columns * 209 + 209) / 419)
 argglobal
 setlocal fdm=indent
 setlocal fde=0
@@ -152,16 +150,16 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 21) / 43)
+let s:l = 5 - ((4 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+5
 normal! 0
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
-2wincmd w
-wincmd =
+exe 'vert 1resize ' . ((&columns * 209 + 209) / 419)
+exe 'vert 2resize ' . ((&columns * 209 + 209) / 419)
 tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/partials/_global.scss
 set splitbelow splitright
 wincmd t
@@ -178,12 +176,13 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 21) / 43)
+let s:l = 3 - ((2 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+3
 normal! 0
+lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/partials/_markdown-source-view.scss
 set splitbelow splitright
 wincmd t
@@ -206,7 +205,113 @@ exe s:l
 normal! zt
 1
 normal! 0
-tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/partials/_markdown-preview-view.scss
+lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
+tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_colors.scss
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+3wincmd h
+wincmd w
+wincmd w
+wincmd w
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 104 + 209) / 419)
+exe 'vert 2resize ' . ((&columns * 104 + 209) / 419)
+exe 'vert 3resize ' . ((&columns * 104 + 209) / 419)
+exe 'vert 4resize ' . ((&columns * 104 + 209) / 419)
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=10
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 5 - ((4 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+5
+normal! 0
+lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
+wincmd w
+argglobal
+if bufexists("~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_custom-properties.scss") | buffer ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_custom-properties.scss | else | edit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_custom-properties.scss | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=10
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 8 - ((7 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+8
+normal! 0
+lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
+wincmd w
+argglobal
+if bufexists("~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_typo.scss") | buffer ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_typo.scss | else | edit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_typo.scss | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=10
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 6 - ((5 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+6
+normal! 0
+lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
+wincmd w
+argglobal
+if bufexists("~/Documents/dev/repositories/own/obsidian-stoic-theme/src/partials/_markdown-preview-view.scss") | buffer ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/partials/_markdown-preview-view.scss | else | edit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/partials/_markdown-preview-view.scss | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=10
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+2
+normal! zo
+3
+normal! zo
+8
+normal! zo
+15
+normal! zo
+let s:l = 43 - ((26 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+43
+normal! 09|
+lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
+wincmd w
+3wincmd w
+exe 'vert 1resize ' . ((&columns * 104 + 209) / 419)
+exe 'vert 2resize ' . ((&columns * 104 + 209) / 419)
+exe 'vert 3resize ' . ((&columns * 104 + 209) / 419)
+exe 'vert 4resize ' . ((&columns * 104 + 209) / 419)
+tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/stoic-theme-design-vault/.obsidian/themes/Stoic.css
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -222,13 +327,14 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 12 - ((11 * winheight(0) + 21) / 43)
+let s:l = 27 - ((26 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-12
+27
 normal! 0
-tabnext 2
+lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
+tabnext 4
 set stal=1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
