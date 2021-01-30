@@ -74,7 +74,7 @@
 // TODO Improve Styling
 @mixin style-internal-link() {
   $link-color: var(--text-accent);
-  $link-color-hover: var(--text-accent-hover);
+  $link-color-hover: var(--text-selection);
 
   text-decoration: none;
   font-weight: bold;
@@ -156,11 +156,11 @@
 }
 
 @mixin style-inline-code {
-  font-size: var(--font-size-inline-code);
+  font-size: inherit;
   font-family: var(--font-monospace);
   color: $color-white;
   line-height: 1.25em;
-  padding: 1px 4px 2px;
+  padding: 1px 4px 1px;
   position: relative;
   top: -1px;
 }
@@ -173,7 +173,8 @@
   padding: $space-m $space-l;
   margin: 1em 0;
   border-radius: $border-radius;
-  // border: 1px solid var(--primary-background);
+  border: 1px solid var(--background-primary-alt);
+  border-left-width: 5px;
 
   p {
     line-height: calc(var(--line-height-text) * 1.25);

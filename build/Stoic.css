@@ -301,11 +301,11 @@ body .workspace .markdown-preview-view ul li:first-of-type {
   margin-top: 0.25em;
 }
 body .workspace .markdown-preview-view code:not([class*=language-]) {
-  font-size: var(--font-size-inline-code);
+  font-size: inherit;
   font-family: var(--font-monospace);
   color: #ffffff;
   line-height: 1.25em;
-  padding: 1px 4px 2px;
+  padding: 1px 4px 1px;
   position: relative;
   top: -1px;
 }
@@ -317,6 +317,8 @@ body .workspace .markdown-preview-view blockquote {
   padding: calc(1rem * 1) calc((1rem * 2) * 1);
   margin: 1em 0;
   border-radius: 0.5rem;
+  border: 1px solid var(--background-primary-alt);
+  border-left-width: 5px;
 }
 body .workspace .markdown-preview-view blockquote p {
   line-height: calc(var(--line-height-text) * 1.25);
@@ -329,7 +331,7 @@ body .workspace .markdown-preview-view .internal-link {
   transition: all 0.15s ease-in-out;
 }
 body .workspace .markdown-preview-view .internal-link:hover {
-  background: var(--text-accent-hover);
+  background: var(--text-selection);
 }
 body .workspace .markdown-preview-view .external-link {
   transition: all 0.15s ease-in-out;
