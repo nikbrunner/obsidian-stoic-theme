@@ -1,10 +1,10 @@
 @mixin font-family-header($view) {
   @if $view == "preview" {
-    font-family: var(--default-font);
+    font-family: var(--font-preview-header);
   } @else if $view == "editor" {
     font-family: var(--font-mono);
   } @else if $view == "book" {
-    font-family: var(--font-sans);
+    font-family: var(--font-preview-book-header);
   }
 }
 
@@ -12,7 +12,7 @@
   @include font-family-header($view);
 
   font-size: var(--font-size-h1);
-  font-weight: 700;
+  font-weight: 900;
   line-height: var(--line-height-header);
   margin-bottom: 0.5em;
 
@@ -24,9 +24,9 @@
 
   font-size: var(--font-size-h2);
   font-weight: 600;
-  border-bottom: 1px solid var(--text-normal);
+  border-bottom: 1px dashed var(--text-normal);
   padding-bottom: 0.25em;
-  margin-bottom: 0.5em;
+  margin: 0.75em 0 0.35em;
 
   @content;
 }
@@ -73,22 +73,24 @@
 
 // TODO Improve Styling
 @mixin style-internal-link() {
-  transition: all $trans-fast ease-in-out;
+  $link-color: var(--text-accent);
+  $link-color-hover: var(--text-accent-hover);
+
   text-decoration: none;
   font-weight: bold;
-  color: var(--text-normal);
-
-  &::before {
-    content: "❝";
-    font-size: 1.15em;
-    line-height: 1;
-    margin-right: 0.05em;
-    transform: rotate(40deg);
-  }
+  color: $link-color;
+  border-bottom: 1px dashed $link-color;
+  transition: all $trans-fast ease-in-out;
 
   &:hover {
-    opacity: 0.75;
+    background: $link-color-hover;
   }
+}
+
+@mixin style-paragraph() {
+  font-family: var(--font-preview);
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-text);
 }
 
 // TODO Improve Styling
@@ -104,10 +106,10 @@
 
 @mixin style-checkbox() {
   $checkbox-size: 14px;
-  $checkbox-radius: 0px;
+  $checkbox-radius: 2.5px;
 
   border-radius: $checkbox-radius;
-  top: 4px;
+  top: 5px;
   filter: none;
   position: relative;
   appearance: none;
@@ -135,5 +137,46 @@
       line-height: $checkbox-size;
       text-align: center;
     }
+  }
+}
+
+@mixin style-tag {
+  background: var(--background-primary-alt);
+  color: $color-white;
+  font-size: var(--font-size-tag);
+  font-weight: normal;
+  padding: 1px 4px 2px;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  top: -1px;
+  font-family: var(--font-monospace);
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+@mixin style-inline-code {
+  font-size: var(--font-size-inline-code);
+  font-family: var(--font-monospace);
+  color: $color-white;
+  line-height: 1.25em;
+  padding: 1px 4px 2px;
+  position: relative;
+  top: -1px;
+}
+
+@mixin style-blockquote {
+  font-size: var(--font-size-text);
+  font-family: var(--font-sans);
+  box-shadow: $box-shadow;
+  background: $color-black;
+  color: $color-white;
+  padding: $space-m $space-l;
+  margin: 1em 0;
+  border-radius: $border-radius;
+  border: none;
+
+  p {
+    line-height: calc(var(--line-height-text) * 1.25);
   }
 }

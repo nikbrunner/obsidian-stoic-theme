@@ -6,9 +6,13 @@ body {
   --font-monospace: "JetBrains Mono", monospace;
   --font-sans: var(--default-font), sans-serif;
   --font-serif: "Lora", serif;
+  --font-serif-book: "Lora", serif;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
-  --font-preview: var(--font-sans);
+  --font-preview: var(--font-serif);
+  --font-preview-header: var(--font-serif);
+  --font-preview-book: var(--font-serif-book);
+  --font-preview-book-header: var(--font-serif-book);
   --font-editor: var(--font-monospace);
   --font-size-h1: 32px;
   --font-size-h2: 26px;
@@ -19,7 +23,7 @@ body {
   --font-size-text: 14px;
   --font-size-text--book: 16px;
   --font-size-tag: 12px;
-  --font-size-inline-code: 12px;
+  --font-size-inline-code: 11px;
   --line-height-header: 1;
   --line-height-text: 1.5;
 }
@@ -165,67 +169,109 @@ body .workspace .workspace-leaf-resize-handle {
 body .workspace .markdown-preview-view .page-header {
   display: none;
 }
+body .workspace .markdown-preview-view.book h1 {
+  font-family: var(--font-preview-book-header);
+  font-size: var(--font-size-h1);
+  font-weight: 900;
+  line-height: var(--line-height-header);
+  margin-bottom: 0.5em;
+}
+body .workspace .markdown-preview-view.book h2 {
+  font-family: var(--font-preview-book-header);
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  border-bottom: 1px dashed var(--text-normal);
+  padding-bottom: 0.25em;
+  margin: 0.75em 0 0.35em;
+}
+body .workspace .markdown-preview-view.book h3 {
+  font-family: var(--font-preview-book-header);
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+body .workspace .markdown-preview-view.book h4 {
+  font-family: var(--font-preview-book-header);
+  font-size: var(--font-size-h4);
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+body .workspace .markdown-preview-view.book h5 {
+  font-family: var(--font-preview-book-header);
+  font-size: var(--font-size-h5);
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+body .workspace .markdown-preview-view.book h6 {
+  font-family: var(--font-preview-book-header);
+  font-size: var(--font-size-h6);
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
 body .workspace .markdown-preview-view.book blockquote,
 body .workspace .markdown-preview-view.book code,
 body .workspace .markdown-preview-view.book p,
 body .workspace .markdown-preview-view.book li {
   line-height: var(--line-height-text);
   font-size: var(--font-size-text--book);
-  font-family: var(--font-serif);
+  font-family: var(--font-serif-book);
 }
 body .workspace .markdown-preview-view h1 {
-  font-family: var(--default-font);
+  font-family: var(--font-preview-header);
   font-size: var(--font-size-h1);
-  font-weight: 700;
+  font-weight: 900;
   line-height: var(--line-height-header);
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view h2 {
-  font-family: var(--default-font);
+  font-family: var(--font-preview-header);
   font-size: var(--font-size-h2);
   font-weight: 600;
-  border-bottom: 1px solid var(--text-normal);
+  border-bottom: 1px dashed var(--text-normal);
   padding-bottom: 0.25em;
-  margin-bottom: 0.5em;
+  margin: 0.75em 0 0.35em;
 }
 body .workspace .markdown-preview-view h3 {
-  font-family: var(--default-font);
+  font-family: var(--font-preview-header);
   font-size: var(--font-size-h3);
   font-weight: 600;
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view h4 {
-  font-family: var(--default-font);
+  font-family: var(--font-preview-header);
   font-size: var(--font-size-h4);
   font-weight: 500;
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view h5 {
-  font-family: var(--default-font);
+  font-family: var(--font-preview-header);
   font-size: var(--font-size-h5);
   font-weight: 500;
   margin-bottom: 0.5em;
 }
 body .workspace .markdown-preview-view h6 {
-  font-family: var(--default-font);
+  font-family: var(--font-preview-header);
   font-size: var(--font-size-h6);
   font-weight: 500;
   margin-bottom: 0.5em;
 }
-body .workspace .markdown-preview-view blockquote,
-body .workspace .markdown-preview-view p,
-body .workspace .markdown-preview-view li {
+body .workspace .markdown-preview-view p {
+  font-family: var(--font-preview);
   font-size: var(--font-size-text);
   line-height: var(--line-height-text);
-  font-family: var(--font-sans);
+}
+body .workspace .markdown-preview-view li {
+  font-family: var(--font-preview);
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-text);
 }
 body .workspace .markdown-preview-view ul.contains-task-list {
   margin-top: 0;
   padding-inline-start: 30px;
 }
 body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox {
-  border-radius: 0px;
-  top: 4px;
+  border-radius: 2.5px;
+  top: 5px;
   filter: none;
   position: relative;
   appearance: none;
@@ -238,7 +284,7 @@ body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .ta
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 0px;
+  border-radius: 2.5px;
   background: var(--background-primary);
   border: 1px solid var(--background-primary-alt);
   width: 14px;
@@ -260,30 +306,32 @@ body .workspace .markdown-preview-view code:not([class*=language-]) {
   color: #ffffff;
   line-height: 1.25em;
   padding: 1px 4px 2px;
+  position: relative;
+  top: -1px;
 }
 body .workspace .markdown-preview-view blockquote {
+  font-size: var(--font-size-text);
+  font-family: var(--font-sans);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   background: #000000;
   color: #ffffff;
   padding: calc(1rem * 1) calc((1rem * 2) * 1);
   margin: 1em 0;
-  border-radius: 0;
+  border-radius: 0.5rem;
   border: none;
 }
+body .workspace .markdown-preview-view blockquote p {
+  line-height: calc(var(--line-height-text) * 1.25);
+}
 body .workspace .markdown-preview-view .internal-link {
-  transition: all 0.15s ease-in-out;
   text-decoration: none;
   font-weight: bold;
-  color: var(--text-normal);
-}
-body .workspace .markdown-preview-view .internal-link::before {
-  content: "❝";
-  font-size: 1.15em;
-  line-height: 1;
-  margin-right: 0.05em;
-  transform: rotate(40deg);
+  color: var(--text-accent);
+  border-bottom: 1px dashed var(--text-accent);
+  transition: all 0.15s ease-in-out;
 }
 body .workspace .markdown-preview-view .internal-link:hover {
-  opacity: 0.75;
+  background: var(--text-accent-hover);
 }
 body .workspace .markdown-preview-view .external-link {
   transition: all 0.15s ease-in-out;
@@ -313,7 +361,7 @@ body .workspace .markdown-preview-view pre[class*=language-] {
   background: var(--background-primary);
   color: inherit;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  border-radius: 0;
+  border-radius: 0.5rem;
   padding: calc((1rem * 2) * 1);
   scrollbar-width: none;
 }

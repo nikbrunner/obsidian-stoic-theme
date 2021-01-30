@@ -12,13 +12,37 @@ body {
       }
 
       &.book {
+        h1 {
+          @include font-style-h1("book");
+        }
+
+        h2 {
+          @include font-style-h2("book");
+        }
+
+        h3 {
+          @include font-style-h3("book");
+        }
+
+        h4 {
+          @include font-style-h4("book");
+        }
+
+        h5 {
+          @include font-style-h5("book");
+        }
+
+        h6 {
+          @include font-style-h6("book");
+        }
+
         blockquote,
         code,
         p,
         li {
           line-height: var(--line-height-text);
           font-size: var(--font-size-text--book);
-          font-family: var(--font-serif);
+          font-family: var(--font-serif-book);
         }
       }
 
@@ -46,12 +70,12 @@ body {
         @include font-style-h6("preview");
       }
 
-      blockquote,
-      p,
+      p {
+        @include style-paragraph();
+      }
+
       li {
-        font-size: var(--font-size-text);
-        line-height: var(--line-height-text);
-        font-family: var(--font-sans);
+        @include style-paragraph();
       }
 
       ul {
@@ -74,21 +98,11 @@ body {
       }
 
       code:not([class*="language-"]) {
-        font-size: var(--font-size-inline-code);
-        font-family: var(--font-monospace);
-        color: $color-white;
-        line-height: 1.25em;
-        padding: 1px 4px 2px;
+        @include style-inline-code();
       }
 
       blockquote {
-        // box-shadow: $box-shadow;
-        background: $color-black;
-        color: $color-white;
-        padding: $space-m $space-l;
-        margin: 1em 0;
-        border-radius: $border-radius;
-        border: none;
+        @include style-blockquote();
       }
 
       .internal-link {
@@ -101,18 +115,7 @@ body {
 
       .cm-hashtag,
       .tag {
-        background: var(--background-primary-alt);
-        color: $color-white;
-        font-size: var(--font-size-tag);
-        font-weight: normal;
-        padding: 1px 4px 2px;
-        margin-top: 0;
-        margin-bottom: 0;
-        position: relative;
-        top: -1px;
-        font-family: var(--font-monospace);
-        border-radius: 3px;
-        text-decoration: none;
+        @include style-tag();
       }
 
       :not(pre) > code[class*="language-"],

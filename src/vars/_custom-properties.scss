@@ -9,10 +9,14 @@ body {
   --font-monospace: 'JetBrains Mono', monospace;
   --font-sans: var(--default-font), sans-serif;
   --font-serif: 'Lora', serif;
+  --font-serif-book: 'Lora', serif;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
 
-  --font-preview: var(--font-sans);
+  --font-preview: var(--font-serif);
+  --font-preview-header: var(--font-serif);
+  --font-preview-book: var(--font-serif-book);
+  --font-preview-book-header: var(--font-serif-book);
   --font-editor: var(--font-monospace);
 
   --font-size-h1: 32px;
@@ -24,7 +28,7 @@ body {
   --font-size-text: 14px;
   --font-size-text--book: 16px;
   --font-size-tag: 12px;
-  --font-size-inline-code: 12px;
+  --font-size-inline-code: 11px;
 
   --line-height-header: 1;
   --line-height-text: 1.5;
