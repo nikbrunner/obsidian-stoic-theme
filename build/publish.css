@@ -318,7 +318,6 @@ body .workspace .markdown-preview-view blockquote {
   padding: calc(1rem * 1) calc((1rem * 2) * 1);
   margin: 1em 0;
   border-radius: 0.5rem;
-  border: 1px solid var(--primary-background-alt);
 }
 body .workspace .markdown-preview-view blockquote p {
   line-height: calc(var(--line-height-text) * 1.25);

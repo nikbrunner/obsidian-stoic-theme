@@ -173,7 +173,7 @@
   padding: $space-m $space-l;
   margin: 1em 0;
   border-radius: $border-radius;
-  border: 1px solid var(--primary-background-alt);
+  // border: 1px solid var(--primary-background);
 
   p {
     line-height: calc(var(--line-height-text) * 1.25);
