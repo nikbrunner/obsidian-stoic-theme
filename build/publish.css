@@ -44,8 +44,8 @@ body {
   --background-modifier-error-rgb: 61, 0, 0;
   --background-modifier-error-hover: #470000;
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
-  --text-accent: #2ea043;
-  --text-accent-hover: #3fb950;
+  --text-accent: #0366d6;
+  --text-accent-hover: #58a6ff;
   --text-normal: #dcddde;
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
@@ -121,7 +121,7 @@ body {
 
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content .view-header {
   border-right: 2px solid transparent;
-  border-left: 2px solid var(--background-primary);
+  border-left: 2px solid var(--background-primary-alt);
   background: var(--background-primary);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content .view-header > .view-header-title-container::before {
@@ -177,6 +177,9 @@ body .workspace .markdown-preview-view.book h1 {
   line-height: var(--line-height-header);
   margin-bottom: 0.5em;
 }
+body .workspace .markdown-preview-view.book h1 .internal-link {
+  border-bottom: none;
+}
 body .workspace .markdown-preview-view.book h2 {
   font-family: var(--font-preview-book-header);
   font-size: var(--font-size-h2);
@@ -185,11 +188,17 @@ body .workspace .markdown-preview-view.book h2 {
   padding-bottom: 0.25em;
   margin: 0.75em 0 0.35em;
 }
+body .workspace .markdown-preview-view.book h2 .internal-link {
+  border-bottom: none;
+}
 body .workspace .markdown-preview-view.book h3 {
   font-family: var(--font-preview-book-header);
   font-size: var(--font-size-h3);
   font-weight: 600;
   margin-bottom: 0.5em;
+}
+body .workspace .markdown-preview-view.book h3 .internal-link {
+  border-bottom: none;
 }
 body .workspace .markdown-preview-view.book h4 {
   font-family: var(--font-preview-book-header);
@@ -197,17 +206,26 @@ body .workspace .markdown-preview-view.book h4 {
   font-weight: 500;
   margin-bottom: 0.5em;
 }
+body .workspace .markdown-preview-view.book h4 .internal-link {
+  border-bottom: none;
+}
 body .workspace .markdown-preview-view.book h5 {
   font-family: var(--font-preview-book-header);
   font-size: var(--font-size-h5);
   font-weight: 500;
   margin-bottom: 0.5em;
 }
+body .workspace .markdown-preview-view.book h5 .internal-link {
+  border-bottom: none;
+}
 body .workspace .markdown-preview-view.book h6 {
   font-family: var(--font-preview-book-header);
   font-size: var(--font-size-h6);
   font-weight: 500;
   margin-bottom: 0.5em;
+}
+body .workspace .markdown-preview-view.book h6 .internal-link {
+  border-bottom: none;
 }
 body .workspace .markdown-preview-view.book blockquote,
 body .workspace .markdown-preview-view.book code,
@@ -224,6 +242,9 @@ body .workspace .markdown-preview-view h1 {
   line-height: var(--line-height-header);
   margin-bottom: 0.5em;
 }
+body .workspace .markdown-preview-view h1 .internal-link {
+  border-bottom: none;
+}
 body .workspace .markdown-preview-view h2 {
   font-family: var(--font-preview-header);
   font-size: var(--font-size-h2);
@@ -232,11 +253,17 @@ body .workspace .markdown-preview-view h2 {
   padding-bottom: 0.25em;
   margin: 0.75em 0 0.35em;
 }
+body .workspace .markdown-preview-view h2 .internal-link {
+  border-bottom: none;
+}
 body .workspace .markdown-preview-view h3 {
   font-family: var(--font-preview-header);
   font-size: var(--font-size-h3);
   font-weight: 600;
   margin-bottom: 0.5em;
+}
+body .workspace .markdown-preview-view h3 .internal-link {
+  border-bottom: none;
 }
 body .workspace .markdown-preview-view h4 {
   font-family: var(--font-preview-header);
@@ -244,17 +271,26 @@ body .workspace .markdown-preview-view h4 {
   font-weight: 500;
   margin-bottom: 0.5em;
 }
+body .workspace .markdown-preview-view h4 .internal-link {
+  border-bottom: none;
+}
 body .workspace .markdown-preview-view h5 {
   font-family: var(--font-preview-header);
   font-size: var(--font-size-h5);
   font-weight: 500;
   margin-bottom: 0.5em;
 }
+body .workspace .markdown-preview-view h5 .internal-link {
+  border-bottom: none;
+}
 body .workspace .markdown-preview-view h6 {
   font-family: var(--font-preview-header);
   font-size: var(--font-size-h6);
   font-weight: 500;
   margin-bottom: 0.5em;
+}
+body .workspace .markdown-preview-view h6 .internal-link {
+  border-bottom: none;
 }
 body .workspace .markdown-preview-view p {
   font-family: var(--font-preview);

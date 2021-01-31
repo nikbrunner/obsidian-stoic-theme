@@ -6,6 +6,10 @@
   } @else if $view == "book" {
     font-family: var(--font-preview-book-header);
   }
+
+  .internal-link {
+    border-bottom: none;
+  }
 }
 
 @mixin font-style-h1($view) {
