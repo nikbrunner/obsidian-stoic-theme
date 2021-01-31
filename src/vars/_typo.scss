@@ -137,7 +137,7 @@
     &::after {
       content: "✗";
       background: var(--background-primary-alt);
-      color: white;
+      color: var(--text-normal);
       line-height: $checkbox-size;
       text-align: center;
     }

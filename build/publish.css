@@ -21,7 +21,7 @@ body {
   --font-size-h4: 16px;
   --font-size-h5: 14px;
   --font-size-h6: 10px;
-  --font-size-text: 14px;
+  --font-size-text: 16px;
   --font-size-text--book: 16px;
   --font-size-tag: 12px;
   --font-size-inline-code: 11px;
@@ -46,7 +46,7 @@ body {
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #0366d6;
   --text-accent-hover: #58a6ff;
-  --text-normal: #dcddde;
+  --text-normal: #c9d1d9;
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
   --text-error: #e16d76;
@@ -330,7 +330,7 @@ body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .ta
 body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox:checked::after {
   content: "✗";
   background: var(--background-primary-alt);
-  color: white;
+  color: var(--text-normal);
   line-height: 14px;
   text-align: center;
 }
