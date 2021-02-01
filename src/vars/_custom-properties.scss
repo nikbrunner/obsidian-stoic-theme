@@ -6,6 +6,7 @@
 body {
   --default-font: 'Helvetica', -apple-system, BlinkMacSystemFont, Segoe UI,
     Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-default: var(--default-font);
   --font-monospace: 'JetBrains Mono', monospace;
   --font-sans: var(--default-font), sans-serif;
   --font-serif: 'Lora', serif;
@@ -13,8 +14,8 @@ body {
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
 
-  --font-preview: var(--font-serif);
-  --font-preview-header: var(--font-serif);
+  --font-preview: var(--font-default);
+  --font-preview-header: var(--font-default);
   --font-preview-book: var(--font-serif-book);
   --font-preview-book-header: var(--font-serif-book);
   --font-editor: var(--font-monospace);
@@ -36,8 +37,8 @@ body {
 
 // Overwrite theme CSS variables
 .theme-dark {
-  --background-primary: #{$color-black};
-  --background-primary-alt: #{$color-white};
+  --background-primary: #{$github-dark};
+  --background-primary-alt: #{$github-dark-bright};
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;
   --background-accent: #000;
@@ -70,6 +71,7 @@ body {
   --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
   --panel-border-color: #18191e;
 
+  --black: #{$github-dark};
   --gray-1: #5c6370;
   --gray-2: #abb2bf;
   --red: #e06c75;
@@ -79,11 +81,12 @@ body {
   --purple: #c678dd;
   --blue: #61afef;
   --yellow: #e5c07b;
+  --white: #{$github-white};
 }
 
 .theme-light {
-  --background-primary: #{$color-white};
-  --background-primary-alt: #{$color-black};
+  --background-primary: #{$github-white};
+  --background-primary-alt: #{$github-white-dark};
   --background-secondary: #eaeaeb;
   --background-secondary-alt: #dbdbdc;
   --background-accent: #fff;
@@ -98,7 +101,7 @@ body {
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: #{$github-blue};
   --text-accent-hover: #{$github-blue-bright};
-  --text-normal: #{$color-black};
+  --text-normal: #{$github-dark};
   --text-muted: #8e8e90;
   --text-faint: #999999;
   --text-error: #e75545;
@@ -116,13 +119,15 @@ body {
   --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
   --panel-border-color: #dbdbdc;
 
+  --black: #{$github-dark};
   --gray-1: #383a42;
   --gray-2: #383a42;
   --red: #e75545;
-  --green: #4ea24c;
-  --blue: #3d74f6;
-  --purple: #a625a4;
-  --aqua: #0084bc;
-  --yellow: #e35649;
+  --green: #{$github-green};
+  --blue: #{$github-blue};
+  --purple: #{$github-purple};
+  --aqua: ;
   --orange: #986800;
+  --yellow: #e35649;
+  --white: #{$github-white};
 }

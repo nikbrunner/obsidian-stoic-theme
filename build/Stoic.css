@@ -3,14 +3,15 @@
 body {
   --default-font: "Helvetica", -apple-system, BlinkMacSystemFont, Segoe UI,
     Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-default: var(--default-font);
   --font-monospace: "JetBrains Mono", monospace;
   --font-sans: var(--default-font), sans-serif;
   --font-serif: "Lora", serif;
   --font-serif-book: "Lora", serif;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
-  --font-preview: var(--font-serif);
-  --font-preview-header: var(--font-serif);
+  --font-preview: var(--font-default);
+  --font-preview-header: var(--font-default);
   --font-preview-book: var(--font-serif-book);
   --font-preview-book-header: var(--font-serif-book);
   --font-editor: var(--font-monospace);
@@ -30,7 +31,7 @@ body {
 
 .theme-dark {
   --background-primary: #0d1117;
-  --background-primary-alt: #f0f4f8;
+  --background-primary-alt: #13181f;
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;
   --background-accent: #000;
@@ -62,6 +63,7 @@ body {
   --scrollbar-bg: rgba(255, 255, 255, 0.05);
   --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
   --panel-border-color: #18191e;
+  --black: #0d1117;
   --gray-1: #5c6370;
   --gray-2: #abb2bf;
   --red: #e06c75;
@@ -71,11 +73,12 @@ body {
   --purple: #c678dd;
   --blue: #61afef;
   --yellow: #e5c07b;
+  --white: #f0f4f8;
 }
 
 .theme-light {
   --background-primary: #f0f4f8;
-  --background-primary-alt: #0d1117;
+  --background-primary-alt: #c9d1d9;
   --background-secondary: #eaeaeb;
   --background-secondary-alt: #dbdbdc;
   --background-accent: #fff;
@@ -107,15 +110,17 @@ body {
   --scrollbar-bg: rgba(0, 0, 0, 0.05);
   --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
   --panel-border-color: #dbdbdc;
+  --black: #0d1117;
   --gray-1: #383a42;
   --gray-2: #383a42;
   --red: #e75545;
-  --green: #4ea24c;
-  --blue: #3d74f6;
-  --purple: #a625a4;
-  --aqua: #0084bc;
-  --yellow: #e35649;
+  --green: #2ea043;
+  --blue: #0366d6;
+  --purple: #8957e5;
+  --aqua: ;
   --orange: #986800;
+  --yellow: #e35649;
+  --white: #f0f4f8;
 }
 
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content .view-header {
@@ -139,6 +144,47 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container::after {
   background: transparent;
+}
+body .workspace .workspace-tab-header-container {
+  background: var(--background-primary);
+}
+body .workspace .workspace-ribbon {
+  background: var(--background-primary);
+}
+body .workspace .workspace-ribbon.mod-left.is-collapsed {
+  border-right-color: var(--background-primary-alt);
+}
+body .workspace .workspace-tabs {
+  background: var(--background-primary);
+}
+body .workspace .workspace-tabs .workspace-leaf {
+  background: var(--background-primary);
+}
+body .workspace .workspace-tabs .workspace-tab-header-container .workspace-tab-container-before.is-before-active {
+  background: var(--background-primary-alt);
+}
+body .workspace .workspace-tabs .workspace-tab-header-container .workspace-tab-container-before.is-before-active .workspace-tab-header-inner {
+  background: var(--background-primary);
+}
+body .workspace .workspace-tabs .workspace-tab-header-container .workspace-tab-container-inner .workspace-tab-header {
+  background: var(--background-primary);
+}
+body .workspace .workspace-tabs .workspace-tab-header-container .workspace-tab-container-inner .workspace-tab-header .workspace-tab-header-inner {
+  background: var(--background-primary);
+}
+body .workspace .workspace-tabs .workspace-tab-header-container .workspace-tab-container-inner .workspace-tab-header.is-after-active {
+  background: var(--background-primary-alt);
+}
+body .workspace .workspace-tabs .workspace-tab-header-container .workspace-tab-container-inner .workspace-tab-header.is-active {
+  color: var(--text-muted);
+}
+body .workspace .workspace-tabs .workspace-tab-header-container .workspace-tab-container-inner .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background: var(--background-primary-alt);
+  color: var(--text-muted);
+}
+body .status-bar {
+  background-color: var(--background-primary);
+  border-top: 1px solid var(--background-primary-alt);
 }
 body .markdown-source-view blockquote,
 body .markdown-source-view pre,
@@ -382,7 +428,7 @@ body .workspace .markdown-preview-view .external-link:hover {
 body .workspace .markdown-preview-view .cm-hashtag,
 body .workspace .markdown-preview-view .tag {
   background: var(--background-primary-alt);
-  color: #f0f4f8;
+  color: var(--text-normal);
   font-size: var(--font-size-tag);
   font-weight: normal;
   padding: 1px 4px 2px;

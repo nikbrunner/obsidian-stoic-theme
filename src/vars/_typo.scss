@@ -147,7 +147,7 @@
 
 @mixin style-tag {
   background: var(--background-primary-alt);
-  color: $color-white;
+  color: var(--text-normal);
   font-size: var(--font-size-tag);
   font-weight: normal;
   padding: 1px 4px 2px;

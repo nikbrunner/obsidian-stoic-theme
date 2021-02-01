@@ -25,7 +25,7 @@ body {
         & > .workspace-leaf-content {
           & > .view-header {
             border-right: 2px solid transparent;
-            border-left: 2px solid $color-black;
+            border-left: 2px solid $github-dark;
             background: var(--background-primary);
 
             & > .view-header-title-container {
@@ -41,6 +41,68 @@ body {
         }
       }
     }
+  }
+
+  .workspace {
+    .workspace-tab-header-container {
+      background: var(--background-primary);
+    }
+
+    .workspace-ribbon {
+      background: var(--background-primary);
+
+      &.mod-left {
+        &.is-collapsed {
+          border-right-color: var(--background-primary-alt);
+        }
+      }
+    }
+
+    .workspace-tabs {
+      background: var(--background-primary);
+
+      .workspace-leaf {
+        background: var(--background-primary);
+      }
+
+      .workspace-tab-header-container {
+        .workspace-tab-container-before.is-before-active {
+          background: var(--background-primary-alt);
+
+          .workspace-tab-header-inner {
+            background: var(--background-primary);
+          }
+        }
+
+        .workspace-tab-container-inner {
+          .workspace-tab-header {
+            background: var(--background-primary);
+
+            .workspace-tab-header-inner {
+              background: var(--background-primary);
+            }
+
+            &.is-after-active {
+              background: var(--background-primary-alt);
+            }
+
+            &.is-active {
+              color: var(--text-muted);
+
+              .workspace-tab-header-inner {
+                background: var(--background-primary-alt);
+                color: var(--text-muted);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .status-bar {
+    background-color: var(--background-primary);
+    border-top: 1px solid var(--background-primary-alt);
   }
 
   .markdown-source-view,

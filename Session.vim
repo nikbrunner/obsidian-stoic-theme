@@ -20,7 +20,7 @@ let NERDTreeUseTCD =  0
 let NERDTreeGitStatusUseNerdFonts = "0"
 let NERDTreeMapToggleFilters = "f"
 let NERDTreeMapPreview = "go"
-let Taboo_tabs = "1	Stoic\n2	Global\n3	Source View\n4	Preview View\n5	Compiled\n"
+let Taboo_tabs = "1	Stoic\n2	Vars\n3	Global\n4	Source View\n5	Preview View\n6	Compiled\n"
 let NERDTreeNotificationThreshold =  100 
 let NERDTreeMapActivateNode = "o"
 let NERDTreeMapCustomOpen = "<CR>"
@@ -99,15 +99,15 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 src/partials/_global.scss
+badd +56 src/partials/_global.scss
 badd +1 src/partials/_markdown-source-view.scss
 badd +1 src/partials/_markdown-preview-view.scss
-badd +17 src/vars/_typo.scss
+badd +153 src/vars/_typo.scss
 badd +14 src/vars/_colors.scss
-badd +55 src/vars/_custom-properties.scss
+badd +128 src/vars/_custom-properties.scss
 badd +5 package.json
-badd +0 stoic-theme-design-vault/.obsidian/themes/Stoic.css
-badd +3 src/Stoic.scss
+badd +1 stoic-theme-design-vault/.obsidian/themes/Stoic.css
+badd +1 src/Stoic.scss
 argglobal
 %argdel
 $argadd ./
@@ -123,8 +123,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 90 + 91) / 182)
-exe 'vert 2resize ' . ((&columns * 91 + 91) / 182)
+exe 'vert 1resize ' . ((&columns * 51 + 51) / 102)
+exe 'vert 2resize ' . ((&columns * 50 + 51) / 102)
 argglobal
 setlocal fdm=indent
 setlocal fde=0
@@ -134,11 +134,11 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 5 - ((4 * winheight(0) + 19) / 38)
+let s:l = 12 - ((11 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
+12
 normal! 0
 wincmd w
 argglobal
@@ -151,16 +151,68 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 13 - ((12 * winheight(0) + 19) / 38)
+let s:l = 8 - ((6 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-13
-normal! 026|
+8
+normal! 018|
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
-exe 'vert 1resize ' . ((&columns * 90 + 91) / 182)
-exe 'vert 2resize ' . ((&columns * 91 + 91) / 182)
+exe 'vert 1resize ' . ((&columns * 51 + 51) / 102)
+exe 'vert 2resize ' . ((&columns * 50 + 51) / 102)
+tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_custom-properties.scss
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 51 + 51) / 102)
+exe 'vert 2resize ' . ((&columns * 50 + 51) / 102)
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=10
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+7
+normal! zo
+let s:l = 129 - ((29 * winheight(0) + 17) / 34)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+129
+normal! 011|
+lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
+wincmd w
+argglobal
+if bufexists("~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_colors.scss") | buffer ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_colors.scss | else | edit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_colors.scss | endif
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=10
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 6 - ((4 * winheight(0) + 17) / 34)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+6
+normal! 016|
+lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
+wincmd w
+exe 'vert 1resize ' . ((&columns * 51 + 51) / 102)
+exe 'vert 2resize ' . ((&columns * 50 + 51) / 102)
 tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/partials/_global.scss
 set splitbelow splitright
 wincmd t
@@ -173,26 +225,24 @@ setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=10
+setlocal fdl=8
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
 2
 normal! zo
-5
+47
 normal! zo
-6
+52
 normal! zo
-7
+55
 normal! zo
-8
-normal! zo
-let s:l = 13 - ((12 * winheight(0) + 19) / 38)
+let s:l = 52 - ((16 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-13
-normal! 023|
+52
+normal! 028|
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/partials/_markdown-source-view.scss
 set splitbelow splitright
@@ -210,53 +260,27 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 19) / 38)
+let s:l = 3 - ((2 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+3
 normal! 0
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
-tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_custom-properties.scss
+tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_typo.scss
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-wincmd _ | wincmd |
-vsplit
-2wincmd h
-wincmd w
+1wincmd h
 wincmd w
 wincmd t
 set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 63 + 91) / 182)
-exe 'vert 2resize ' . ((&columns * 62 + 91) / 182)
-exe 'vert 3resize ' . ((&columns * 55 + 91) / 182)
+exe 'vert 1resize ' . ((&columns * 51 + 51) / 102)
+exe 'vert 2resize ' . ((&columns * 50 + 51) / 102)
 argglobal
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=10
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-7
-normal! zo
-39
-normal! zc
-let s:l = 86 - ((62 * winheight(0) + 19) / 38)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-86
-normal! 037|
-lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
-wincmd w
-argglobal
-if bufexists("~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_typo.scss") | buffer ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_typo.scss | else | edit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_typo.scss | endif
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -277,12 +301,12 @@ normal! zo
 normal! zo
 175
 normal! zo
-let s:l = 164 - ((21 * winheight(0) + 19) / 38)
+let s:l = 6 - ((5 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-164
-normal! 038|
+6
+normal! 04|
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
 argglobal
@@ -303,18 +327,16 @@ normal! zo
 normal! zo
 15
 normal! zo
-let s:l = 50 - ((19 * winheight(0) + 19) / 38)
+let s:l = 53 - ((19 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-50
-normal! 022|
+53
+normal! 010|
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 63 + 91) / 182)
-exe 'vert 2resize ' . ((&columns * 62 + 91) / 182)
-exe 'vert 3resize ' . ((&columns * 55 + 91) / 182)
+exe 'vert 1resize ' . ((&columns * 51 + 51) / 102)
+exe 'vert 2resize ' . ((&columns * 50 + 51) / 102)
 tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/stoic-theme-design-vault/.obsidian/themes/Stoic.css
 set splitbelow splitright
 wincmd t
@@ -331,14 +353,14 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 27 - ((26 * winheight(0) + 21) / 43)
+let s:l = 157 - ((16 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-27
-normal! 0
+157
+normal! 025|
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
-tabnext 4
+tabnext 5
 set stal=1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
