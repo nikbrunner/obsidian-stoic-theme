@@ -30,7 +30,7 @@ body {
 }
 
 .theme-dark {
-  --background-primary: #0d1117;
+  --background-primary: #000000;
   --background-primary-alt: #13181f;
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;

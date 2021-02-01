@@ -37,7 +37,7 @@ body {
 
 // Overwrite theme CSS variables
 .theme-dark {
-  --background-primary: #{$github-dark};
+  --background-primary: #{$color-black};
   --background-primary-alt: #{$github-dark-bright};
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;

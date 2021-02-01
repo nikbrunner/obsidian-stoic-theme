@@ -185,12 +185,12 @@ setlocal fdn=20
 setlocal fen
 7
 normal! zo
-let s:l = 129 - ((29 * winheight(0) + 17) / 34)
+let s:l = 6 - ((5 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-129
-normal! 011|
+6
+normal! 0
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
 argglobal
@@ -203,12 +203,12 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 6 - ((4 * winheight(0) + 17) / 34)
+let s:l = 14 - ((13 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-6
-normal! 016|
+14
+normal! 010|
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
 exe 'vert 1resize ' . ((&columns * 51 + 51) / 102)
@@ -301,12 +301,12 @@ normal! zo
 normal! zo
 175
 normal! zo
-let s:l = 6 - ((5 * winheight(0) + 17) / 34)
+let s:l = 1 - ((0 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-6
-normal! 04|
+1
+normal! 0
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
 argglobal
@@ -360,7 +360,7 @@ normal! zt
 157
 normal! 025|
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
-tabnext 5
+tabnext 2
 set stal=1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
