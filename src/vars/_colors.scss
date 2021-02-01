@@ -5,10 +5,10 @@ $github-blue: #0366d6;
 $github-blue-bright: #58a6ff;
 $github-purple: #8957e5;
 $github-red: #f85149;
-$github-white: #c9d1d9;
-$github-white-secondary: #f0f4f8;
+$github-white: #f0f4f8;
+$github-white-secondary: #c9d1d9;
 $github-dark: #0d1117;
 $github-dark-bright: #13181f;
 
-$color-white: #ffffff;
-$color-black: #000000;
+$color-white: $github-white;
+$color-black: $github-dark;

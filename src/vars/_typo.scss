@@ -83,7 +83,7 @@
   text-decoration: none;
   font-weight: bold;
   color: $link-color;
-  border-bottom: 1px dashed $link-color;
+  // border-bottom: 1px dashed $link-color;
   transition: all $trans-fast ease-in-out;
 
   &:hover {
@@ -134,9 +134,10 @@
   }
 
   &:checked {
+    background: var(--background-primary-alt);
+
     &::after {
       content: "✗";
-      background: var(--background-primary-alt);
       color: var(--text-normal);
       line-height: $checkbox-size;
       text-align: center;
@@ -160,7 +161,7 @@
 }
 
 @mixin style-inline-code {
-  background: var(--background-primary);
+  background: var(--background-accent);
   color: var(--text-normal);
   font-family: var(--font-monospace);
   font-size: inherit;

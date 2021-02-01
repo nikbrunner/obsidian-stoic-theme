@@ -30,8 +30,8 @@ body {
 }
 
 .theme-dark {
-  --background-primary: #000000;
-  --background-primary-alt: #ffffff;
+  --background-primary: #0d1117;
+  --background-primary-alt: #f0f4f8;
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;
   --background-accent: #000;
@@ -46,7 +46,7 @@ body {
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #0366d6;
   --text-accent-hover: #58a6ff;
-  --text-normal: #c9d1d9;
+  --text-normal: #f0f4f8;
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
   --text-error: #e16d76;
@@ -75,8 +75,8 @@ body {
 }
 
 .theme-light {
-  --background-primary: #ffffff;
-  --background-primary-alt: #000000;
+  --background-primary: #f0f4f8;
+  --background-primary-alt: #0d1117;
   --background-secondary: #eaeaeb;
   --background-secondary-alt: #dbdbdc;
   --background-accent: #fff;
@@ -91,7 +91,7 @@ body {
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: #0366d6;
   --text-accent-hover: #58a6ff;
-  --text-normal: #000000;
+  --text-normal: #0d1117;
   --text-muted: #8e8e90;
   --text-faint: #999999;
   --text-error: #e75545;
@@ -132,7 +132,7 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
   border-right: 2px solid transparent;
-  border-left: 2px solid #000000;
+  border-left: 2px solid #0d1117;
   background: var(--background-primary);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container::before {
@@ -327,9 +327,11 @@ body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .ta
   width: 14px;
   height: 14px;
 }
+body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox:checked {
+  background: var(--background-primary-alt);
+}
 body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox:checked::after {
   content: "✗";
-  background: var(--background-primary-alt);
   color: var(--text-normal);
   line-height: 14px;
   text-align: center;
@@ -338,7 +340,7 @@ body .workspace .markdown-preview-view ul li:first-of-type {
   margin-top: 0.25em;
 }
 body .workspace .markdown-preview-view code:not([class*=language-]) {
-  background: var(--background-primary);
+  background: var(--background-accent);
   color: var(--text-normal);
   font-family: var(--font-monospace);
   font-size: inherit;
@@ -365,7 +367,6 @@ body .workspace .markdown-preview-view .internal-link {
   text-decoration: none;
   font-weight: bold;
   color: var(--text-accent);
-  border-bottom: 1px dashed var(--text-accent);
   transition: all 0.15s ease-in-out;
 }
 body .workspace .markdown-preview-view .internal-link:hover {
@@ -382,7 +383,7 @@ body .workspace .markdown-preview-view .external-link:hover {
 body .workspace .markdown-preview-view .cm-hashtag,
 body .workspace .markdown-preview-view .tag {
   background: var(--background-primary-alt);
-  color: #ffffff;
+  color: #f0f4f8;
   font-size: var(--font-size-tag);
   font-weight: normal;
   padding: 1px 4px 2px;
