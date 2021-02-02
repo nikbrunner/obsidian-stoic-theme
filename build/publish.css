@@ -411,7 +411,6 @@ body .workspace .markdown-preview-view blockquote p {
 }
 body .workspace .markdown-preview-view .internal-link {
   text-decoration: none;
-  font-weight: bold;
   color: var(--text-accent);
   transition: all 0.15s ease-in-out;
 }

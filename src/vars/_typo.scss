@@ -81,7 +81,7 @@
   $link-color-hover: var(--text-selection);
 
   text-decoration: none;
-  font-weight: bold;
+  // font-weight: bold;
   color: $link-color;
   // border-bottom: 1px dashed $link-color;
   transition: all $trans-fast ease-in-out;

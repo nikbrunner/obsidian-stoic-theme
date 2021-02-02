@@ -6,6 +6,7 @@
       {
         "id": "49a986b6bf1044c2",
         "type": "leaf",
+        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -28,7 +29,6 @@
       {
         "id": "e5f4ab6564ca22f0",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Example Sheet 3.md",
+                "file": "Code.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,10 +128,10 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Code.md",
     "Example Sheet 3.md",
     "Stoic Obsidian Plugin ( Initiale Idee ).m4a.md",
     "Example Sheet 4.md",
-    "Code.md",
     "Book.md",
     "Example Sheet.md",
     "Untitled.md",
