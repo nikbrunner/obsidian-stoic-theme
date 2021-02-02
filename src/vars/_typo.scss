@@ -15,8 +15,6 @@
 @mixin font-style-h1($view) {
   @include font-family-header($view);
 
-  // TODO Refactor
-  font-family: var(--font-serif);
   font-size: var(--font-size-h1);
   font-weight: 900;
   line-height: var(--line-height-header);
@@ -28,8 +26,6 @@
 @mixin font-style-h2($view) {
   @include font-family-header($view);
 
-  // TODO Refactor
-  font-family: var(--font-serif);
   font-size: var(--font-size-h2);
   font-weight: 600;
   border-bottom: 1px dashed var(--text-normal);
