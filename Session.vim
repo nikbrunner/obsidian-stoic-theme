@@ -207,11 +207,11 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 14 - ((13 * winheight(0) + 21) / 43)
+let s:l = 12 - ((11 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-14
+12
 normal! 010|
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
@@ -225,12 +225,14 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 21) / 43)
+2
+normal! zo
+let s:l = 83 - ((25 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+83
+normal! 03|
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
 3wincmd w

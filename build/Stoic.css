@@ -217,6 +217,7 @@ body .workspace .markdown-preview-view .page-header {
 }
 body .workspace .markdown-preview-view.book h1 {
   font-family: var(--font-preview-book-header);
+  font-family: var(--font-serif);
   font-size: var(--font-size-h1);
   font-weight: 900;
   line-height: var(--line-height-header);
@@ -227,6 +228,7 @@ body .workspace .markdown-preview-view.book h1 .internal-link {
 }
 body .workspace .markdown-preview-view.book h2 {
   font-family: var(--font-preview-book-header);
+  font-family: var(--font-serif);
   font-size: var(--font-size-h2);
   font-weight: 600;
   border-bottom: 1px dashed var(--text-normal);
@@ -282,6 +284,7 @@ body .workspace .markdown-preview-view.book li {
 }
 body .workspace .markdown-preview-view h1 {
   font-family: var(--font-preview-header);
+  font-family: var(--font-serif);
   font-size: var(--font-size-h1);
   font-weight: 900;
   line-height: var(--line-height-header);
@@ -292,6 +295,7 @@ body .workspace .markdown-preview-view h1 .internal-link {
 }
 body .workspace .markdown-preview-view h2 {
   font-family: var(--font-preview-header);
+  font-family: var(--font-serif);
   font-size: var(--font-size-h2);
   font-weight: 600;
   border-bottom: 1px dashed var(--text-normal);
