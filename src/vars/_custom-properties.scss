@@ -37,11 +37,11 @@ body {
 
 // Overwrite theme CSS variables
 .theme-dark {
-  --background-primary: #{$color-black};
-  --background-primary-alt: #{$github-dark-bright};
+  --background-primary: #{$stoic-blue-dark};
+  --background-primary-alt: #{$stoic-blue-bright};
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;
-  --background-accent: #000;
+  --background-accent: #{$stoic-blue-bright};
   --background-modifier-border: #424958;
   --background-modifier-form-field: rgba(0, 0, 0, 0.3);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
@@ -51,9 +51,9 @@ body {
   --background-modifier-error-rgb: 61, 0, 0;
   --background-modifier-error-hover: #470000;
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
-  --text-accent: #{$github-blue};
-  --text-accent-hover: #{$github-blue-bright};
-  --text-normal: #{$github-white};
+  --text-accent: #{$stoic-blue};
+  --text-accent-hover: #{$stoic-blue-bright};
+  --text-normal: #{$stoic-white-dark};
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
   --text-error: #e16d76;
@@ -89,7 +89,7 @@ body {
   --background-primary-alt: #{$stoic-gray-dark};
   --background-secondary: #eaeaeb;
   --background-secondary-alt: #dbdbdc;
-  --background-accent: #fff;
+  --background-accent: #{$stoic-blue-bright}
   --background-modifier-border: #dbdbdc;
   --background-modifier-form-field: #fff;
   --background-modifier-form-field-highlighted: #fff;
