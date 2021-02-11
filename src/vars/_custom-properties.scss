@@ -7,7 +7,7 @@ body {
   --default-font: 'Helvetica', -apple-system, BlinkMacSystemFont, Segoe UI,
     Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --font-default: var(--default-font);
-  --font-monospace: 'JetBrains Mono', monospace;
+  --font-monospace: 'SF Mono', monospace;
   --font-sans: var(--default-font), sans-serif;
   --font-serif: 'Lora', serif;
   --font-serif-book: 'Lora', serif;
@@ -85,8 +85,8 @@ body {
 }
 
 .theme-light {
-  --background-primary: #{$github-white};
-  --background-primary-alt: #{$github-white-dark};
+  --background-primary: #{$stoic-gray};
+  --background-primary-alt: #{$stoic-gray-dark};
   --background-secondary: #eaeaeb;
   --background-secondary-alt: #dbdbdc;
   --background-accent: #fff;
@@ -99,9 +99,9 @@ body {
   --background-modifier-error-rgb: 230, 135, 135;
   --background-modifier-error-hover: #ff9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
-  --text-accent: #{$github-blue};
-  --text-accent-hover: #{$github-blue-bright};
-  --text-normal: #{$github-dark};
+  --text-accent: #{$stoic-blue};
+  --text-accent-hover: #{$stoic-blue-bright};
+  --text-normal: #{$stoic-blue-dark};
   --text-muted: #8e8e90;
   --text-faint: #999999;
   --text-error: #e75545;
