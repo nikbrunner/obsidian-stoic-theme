@@ -25,7 +25,7 @@ body {
   --font-size-text: 16px;
   --font-size-text--book: 16px;
   --font-size-tag: 12px;
-  --font-size-inline-code: 11px;
+  --font-size-inline-code: 12px;
   --line-height-header: 1;
   --line-height-text: 1.5;
 }
@@ -48,6 +48,7 @@ body {
   --text-accent: #57698a;
   --text-accent-hover: #697ca0;
   --text-normal: #c9d1d9;
+  --text-inline-code: #c2d2dc;
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
   --text-error: #e16d76;
@@ -95,6 +96,7 @@ body {
   --text-accent: #57698a;
   --text-accent-hover: #697ca0;
   --text-normal: #364050;
+  --text-inline-code: #c2d2dc;
   --text-muted: #8e8e90;
   --text-faint: #999999;
   --text-error: #e75545;
@@ -208,6 +210,16 @@ body .markdown-source-view {
 }
 body .markdown-source-view .cm-s-obsidian pre.HyperMD-list-line {
   padding-top: 0;
+}
+body .markdown-source-view .cm-s-obsidian span.cm-inline-code {
+  background: var(--background-primary-alt);
+  color: var(--text-inline-code);
+  font-family: var(--font-monospace);
+  font-size: var(--font-size-inline-code);
+  line-height: 1.25em;
+  padding: 1px 4px 1px;
+  position: relative;
+  top: -1px;
 }
 
 body .workspace .workspace-leaf-resize-handle {
@@ -386,10 +398,10 @@ body .workspace .markdown-preview-view ul li:first-of-type {
   margin-top: 0.25em;
 }
 body .workspace .markdown-preview-view code:not([class*=language-]) {
-  background: var(--background-accent);
-  color: var(--text-normal);
+  background: var(--background-primary-alt);
+  color: var(--text-inline-code);
   font-family: var(--font-monospace);
-  font-size: inherit;
+  font-size: var(--font-size-inline-code);
   line-height: 1.25em;
   padding: 1px 4px 1px;
   position: relative;

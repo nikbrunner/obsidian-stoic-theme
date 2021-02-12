@@ -1,9 +1,9 @@
 @mixin font-family-header($view) {
-  @if $view == "preview" {
+  @if $view == 'preview' {
     font-family: var(--font-preview-header);
-  } @else if $view == "editor" {
+  } @else if $view == 'editor' {
     font-family: var(--font-mono);
-  } @else if $view == "book" {
+  } @else if $view == 'book' {
     font-family: var(--font-preview-book-header);
   }
 
@@ -120,7 +120,7 @@
   transition: all $trans-base ease-in-out;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -137,7 +137,7 @@
     background: var(--background-primary-alt);
 
     &::after {
-      content: "✗";
+      content: '✗';
       color: var(--text-normal);
       line-height: $checkbox-size;
       text-align: center;
@@ -161,10 +161,10 @@
 }
 
 @mixin style-inline-code {
-  background: var(--background-accent);
-  color: var(--text-normal);
+  background: var(--background-primary-alt);
+  color: var(--text-inline-code);
   font-family: var(--font-monospace);
-  font-size: inherit;
+  font-size: var(--font-size-inline-code);
   line-height: 1.25em;
   padding: 1px 4px 1px;
   position: relative;

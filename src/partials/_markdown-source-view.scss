@@ -4,4 +4,9 @@ body .markdown-source-view {
   .cm-s-obsidian pre.HyperMD-list-line {
     padding-top: 0;
   }
+
+  .cm-s-obsidian span.cm-inline-code {
+    // color: var(--text-inline-code);
+    @include style-inline-code();
+  }
 }

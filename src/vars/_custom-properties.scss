@@ -29,7 +29,7 @@ body {
   --font-size-text: 16px;
   --font-size-text--book: 16px;
   --font-size-tag: 12px;
-  --font-size-inline-code: 11px;
+  --font-size-inline-code: 12px;
 
   --line-height-header: 1;
   --line-height-text: 1.5;
@@ -54,6 +54,7 @@ body {
   --text-accent: #{$stoic-blue};
   --text-accent-hover: #{$stoic-blue-bright};
   --text-normal: #{$stoic-white-dark};
+  --text-inline-code: #{$stoic-cyan-bright};
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
   --text-error: #e16d76;
@@ -102,6 +103,7 @@ body {
   --text-accent: #{$stoic-blue};
   --text-accent-hover: #{$stoic-blue-bright};
   --text-normal: #{$stoic-blue-dark};
+  --text-inline-code: #{$stoic-cyan-bright};
   --text-muted: #8e8e90;
   --text-faint: #999999;
   --text-error: #e75545;
