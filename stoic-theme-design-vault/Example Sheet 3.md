@@ -14,13 +14,15 @@ lang: en
 Related: [[Project — Notes of Nibru]], [[Project — nibru.dev — next]]
 Repository: [https://github.com/nikbrunner/obsidian/stoic-theme](https://github.com/nikbrunner/obsidian/stoic-theme)
 
+## Embed Markdown
+
+![[Example Sheet]]
+
 ## Initial thoughts
 
 This is my initial thoughts on a **theme** for [[Obsidian]].
-![[Stoic Obsidian Theme ( Initiale Idee ).m4a]]
 
 In continuation of the idea I also got the idea for a **plugin**.
-![[Stoic Obsidian Plugin ( Initiale Idee ).m4a]]
 
 > A minimalistic, high contrast Obsidian Theme with just Black and White colors in representation of the duality of external and internal events.
 
@@ -50,7 +52,7 @@ This is an internal link to [[Code]]
 
 #### Fonts
 
-- [ ] **Headers**: "Felt"-like marker, free font for Headers 
+- [x] **Headers**: "Felt"-like marker, free font for Headers 
 	- "Permanent Marker"
 - [ ] **Editor**: "SF Mono"-like free font 
 - [ ] **Preview**: "SF Mono"-like free font or some other nice sans-serif font

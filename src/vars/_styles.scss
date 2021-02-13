@@ -1,9 +1,9 @@
 @mixin font-family-header($view) {
-  @if $view == 'preview' {
+  @if $view == "preview" {
     font-family: var(--font-preview-header);
-  } @else if $view == 'editor' {
+  } @else if $view == "editor" {
     font-family: var(--font-mono);
-  } @else if $view == 'book' {
+  } @else if $view == "book" {
     font-family: var(--font-preview-book-header);
   }
 
@@ -28,7 +28,7 @@
 
   font-size: var(--font-size-h2);
   font-weight: 600;
-  border-bottom: 1px dashed var(--text-normal);
+  border-bottom: style-border();
   padding-bottom: 0.25em;
   margin: 0.75em 0 0.35em;
 
@@ -113,14 +113,14 @@
   $checkbox-radius: 2.5px;
 
   border-radius: $checkbox-radius;
-  top: 5px;
+  top: 4px;
   filter: none;
   position: relative;
   appearance: none;
   transition: all $trans-base ease-in-out;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -128,7 +128,7 @@
     bottom: 0;
     border-radius: $checkbox-radius;
     background: var(--background-primary);
-    border: 1px solid var(--background-primary-alt);
+    border: style-border(var(--background-primary-alt));
     width: $checkbox-size;
     height: $checkbox-size;
   }
@@ -137,7 +137,7 @@
     background: var(--background-primary-alt);
 
     &::after {
-      content: '✗';
+      content: "✗";
       color: var(--text-normal);
       line-height: $checkbox-size;
       text-align: center;
@@ -160,29 +160,131 @@
   text-decoration: none;
 }
 
-@mixin style-inline-code {
-  background: var(--background-primary-alt);
-  color: var(--text-inline-code);
-  font-family: var(--font-monospace);
-  font-size: var(--font-size-inline-code);
-  line-height: 1.25em;
-  padding: 1px 4px 1px;
-  position: relative;
-  top: -1px;
+@mixin style-inline-code($view) {
+  @if $view == "source" {
+    color: var(--text-inline-code);
+  }
+
+  @if $view == "preview" {
+    background: var(--background-primary-alt);
+    color: var(--text-inline-code);
+    font-family: var(--font-monospace);
+    font-size: var(--font-size-inline-code);
+    line-height: 1.25em;
+    padding: 1px 4px 1px;
+    position: relative;
+    top: -1px;
+  }
 }
 
 @mixin style-blockquote {
+  @include style-box-shadow();
+
+  position: relative;
   font-size: var(--font-size-text);
   font-family: var(--font-sans);
-  box-shadow: $box-shadow;
   color: var(--text-normal);
   padding: $space-m $space-l;
-  margin: 1em 0;
-  border-radius: $border-radius;
-  border: 1px solid var(--background-primary-alt);
-  border-left-width: 5px;
+  margin: $space-l 0;
+  border-radius: $border-radius 0 $border-radius 0;
+  border: style-border(transparent);
+  overflow: hidden;
 
-  p {
+  & > *:first-child {
+    font-style: italic;
+
+    &::first-letter {
+      font-size: var(--font-size-h2);
+      line-height: 1;
+    }
+  }
+
+  &::before {
+    $quote-size: calc(var(--font-size-h1) * 5);
+
+    position: absolute;
+    top: calc(#{$quote-size} / -1.75);
+    left: calc(#{$quote-size} / -10);
+    content: "❜";
+    font-size: $quote-size;
+    color: var(--background-ternary);
+    opacity: 0.25;
+  }
+
+  * {
     line-height: calc(var(--line-height-text) * 1.25);
+  }
+}
+
+@function style-border($color: var(--text-normal)) {
+  @return 1px dashed $color;
+}
+
+@mixin style-markdown-embed {
+  $padding-vertical: 10px;
+  $padding-horizontal: 10px;
+
+  border: 1px solid var(--background-modifier-border);
+  border-radius: $border-radius;
+  padding: 4px 0;
+  margin: 28px 0;
+
+  .markdown-embed {
+    &-title {
+      text-align: left;
+      padding: $padding-vertical $padding-horizontal;
+    }
+
+    &-content {
+      .markdown-preview-view {
+        max-height: none;
+        padding: $padding-vertical $padding-horizontal;
+      }
+    }
+
+    &-link {
+    }
+  }
+}
+
+@mixin style-box-shadow($hidden: false) {
+  transition: box-shadow $trans-fast $ease-out-expo;
+  box-shadow: 0 15px 30px
+    transparentize($color: $stoic-beige-dark, $amount: 0.5);
+
+  @if $hidden == true {
+    box-shadow: 0 15px 30px transparent;
+  }
+}
+
+@mixin style-pre {
+  @include style-box-shadow();
+
+  background: var(--background-primary);
+  border-radius: $border-radius;
+  padding: $space-l;
+  overflow-x: auto;
+
+  * {
+    text-shadow: none;
+    background: inherit;
+  }
+
+  &::-webkit-scrollbar {
+    display: block;
+    height: $border-radius;
+    -webkit-border-radius: 0 0 $border-radius $border-radius;
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--background-primary);
+    height: $border-radius;
+    -webkit-border-radius: 0 0 $border-radius $border-radius;
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+
+  @media print {
+    box-shadow: none;
   }
 }

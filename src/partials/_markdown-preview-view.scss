@@ -98,7 +98,7 @@ body {
       }
 
       code:not([class*='language-']) {
-        @include style-inline-code();
+        @include style-inline-code('preview');
       }
 
       blockquote {
@@ -112,6 +112,13 @@ body {
         @include style-external-link();
       }
 
+      .markdown-embed {
+        @include style-markdown-embed();
+      }
+
+      .file-embed {
+      }
+
       .cm-hashtag,
       .tag {
         @include style-tag();
@@ -119,20 +126,7 @@ body {
 
       :not(pre) > code[class*='language-'],
       pre[class*='language-'] {
-        background: var(--background-primary);
-        color: inherit;
-        box-shadow: $box-shadow;
-        border-radius: $border-radius;
-        padding: $space-l;
-        scrollbar-width: none;
-
-        @media print {
-          box-shadow: none;
-        }
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
+        @include style-pre();
       }
 
       .frontmatter-container {

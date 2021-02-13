@@ -1,12 +1,13 @@
 body .markdown-source-view {
   font-family: var(--font-monospace);
 
-  .cm-s-obsidian pre.HyperMD-list-line {
-    padding-top: 0;
-  }
+  .cm-s-obsidian {
+    pre.HyperMD-list-line {
+      padding-top: 0;
+    }
 
-  .cm-s-obsidian span.cm-inline-code {
-    // color: var(--text-inline-code);
-    @include style-inline-code();
+    span.cm-inline-code {
+      @include style-inline-code("source");
+    }
   }
 }

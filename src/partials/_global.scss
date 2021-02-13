@@ -1,40 +1,43 @@
 body {
   // Sliding panes
-  //body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header
   &.plugin-sliding-panes-rotate-header div.workspace > .mod-root {
+    $leaf-border-style: 1px dashed;
+
+    // Inactive panes
     & > .workspace-leaf {
+      @include style-box-shadow($hidden: true);
+
       & > .workspace-leaf-content {
+        opacity: 0.95;
+
         .view-header {
-          border-right: 2px solid transparent;
-          border-left: 2px solid var(--background-primary-alt);
           background: var(--background-primary);
+          border-right: style-border(transparent);
+          border-left: style-border(var(--text-muted));
 
           & > .view-header-title-container {
-            &::before {
-              background: transparent;
-            }
-
+            &::before,
             &::after {
-              background: transparent;
+              background: var(--background-primary);
             }
           }
         }
       }
 
+      // Active panes
       &.mod-active {
+        @include style-box-shadow();
+
         & > .workspace-leaf-content {
           & > .view-header {
-            border-right: 2px solid transparent;
-            border-left: 2px solid $github-dark;
             background: var(--background-primary);
+            border-right: style-border(transparent);
+            border-left: style-border(var(--text-normal));
 
             & > .view-header-title-container {
-              &::before {
-                background: transparent;
-              }
-
+              &::before,
               &::after {
-                background: transparent;
+                background: var(--background-primary);
               }
             }
           }
@@ -44,6 +47,20 @@ body {
   }
 
   .workspace {
+    .workspace-split {
+      background: var(--background-primary);
+
+      &.mod-horizontal.mod-right-split {
+        border-left: 1px dashed var(--text-normal);
+      }
+
+      .workspace-leaf {
+        & ::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+
     .workspace-tab-header-container {
       background: var(--background-primary);
     }
@@ -63,14 +80,21 @@ body {
 
       .workspace-leaf {
         background: var(--background-primary);
+
+        &::-webkit-scrollbar {
+          display: none;
+          width: 20px;
+        }
       }
 
       .workspace-tab-header-container {
-        .workspace-tab-container-before.is-before-active {
-          background: var(--background-primary-alt);
-
-          .workspace-tab-header-inner {
+        .workspace-tab-container-before {
+          &.is-before-active {
             background: var(--background-primary);
+
+            .workspace-tab-header-inner {
+              background: var(--background-primary);
+            }
           }
         }
 
@@ -82,18 +106,33 @@ body {
               background: var(--background-primary);
             }
 
-            &.is-after-active {
-              background: var(--background-primary-alt);
-            }
-
             &.is-active {
-              color: var(--text-muted);
-
               .workspace-tab-header-inner {
-                background: var(--background-primary-alt);
-                color: var(--text-muted);
+                background: var(--background-primary);
+                border-bottom: 1px dashed var(--text-normal);
+                color: var(--text-normal);
               }
             }
+          }
+        }
+
+        .workspace-tab-container-after {
+          &.is-after-active {
+            background: var(--background-primary);
+
+            .workspace-tab-header-inner {
+              background: var(--background-primary);
+            }
+          }
+        }
+      }
+    }
+
+    .nav-files-container {
+      .nav-file {
+        .nav-file-title {
+          &.is-active {
+            background: var(--background-primary-alt);
           }
         }
       }
