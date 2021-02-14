@@ -102,8 +102,8 @@ body {
   --text-accent-hover: #697ca0;
   --text-normal: #364050;
   --text-inline-code: #c2d2dc;
-  --text-muted: #8c8184;
-  --text-faint: #8c8184;
+  --text-muted: #364050;
+  --text-faint: #364050;
   --text-error: #b94f49;
   --text-error-hover: #a85b57;
   --text-highlight-bg: rgba(105, 124, 160, 0.25);
