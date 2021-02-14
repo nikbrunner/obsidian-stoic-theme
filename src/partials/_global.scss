@@ -7,10 +7,10 @@ body {
     & > .workspace-leaf {
       @include style-box-shadow($hidden: true);
 
-      backdrop-filter: blur(10px) brightness(150%);
+      backdrop-filter: blur(30px) brightness(300%);
 
       & > .workspace-leaf-content {
-        opacity: 0.8;
+        opacity: 0.9;
 
         .view-header {
           background: var(--background-primary);
@@ -31,7 +31,7 @@ body {
         @include style-box-shadow();
 
         & > .workspace-leaf-content {
-          opacity: 0.9;
+          opacity: 0.975;
 
           & > .view-header {
             background: var(--background-primary);
