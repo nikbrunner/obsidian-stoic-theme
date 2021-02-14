@@ -108,8 +108,8 @@ body {
   --text-accent-hover: #{$stoic-blue-light};
   --text-normal: #{$stoic-blue-dark};
   --text-inline-code: #{$stoic-blue-lightest};
-  --text-muted: #{$stoic-blue-dark};
-  --text-faint: #{$stoic-blue-dark};
+  --text-muted: #{$stoic-blue-light};
+  --text-faint: #{$stoic-blue-light};
   --text-error: #{$stoic-red};
   --text-error-hover: #{$stoic-red-light};
   --text-highlight-bg: #{$stoic-selection};

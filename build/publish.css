@@ -33,12 +33,12 @@ body {
 
 .theme-dark {
   --background-primary: #2f3641;
-  --background-primary-alt: #697ca0;
+  --background-primary-alt: #717a8b;
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;
   --background-ternary: #57698a;
   --background-ternary-alt: #364050;
-  --background-accent: #697ca0;
+  --background-accent: #717a8b;
   --background-modifier-border: #a7aaaa;
   --background-modifier-form-field: rgba(0, 0, 0, 0.3);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
@@ -49,9 +49,9 @@ body {
   --background-modifier-error-hover: #470000;
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #57698a;
-  --text-accent-hover: #697ca0;
+  --text-accent-hover: #717a8b;
   --text-normal: #c9d1d9;
-  --text-inline-code: #697ca0;
+  --text-inline-code: #717a8b;
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
   --text-error: #e16d76;
@@ -99,21 +99,21 @@ body {
   --background-modifier-error-hover: #b94f49;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: #57698a;
-  --text-accent-hover: #697ca0;
+  --text-accent-hover: #717a8b;
   --text-normal: #364050;
-  --text-inline-code: #c2d2dc;
-  --text-muted: #364050;
-  --text-faint: #364050;
+  --text-inline-code: #c8d2d8;
+  --text-muted: #717a8b;
+  --text-faint: #717a8b;
   --text-error: #b94f49;
   --text-error-hover: #a85b57;
-  --text-highlight-bg: rgba(105, 124, 160, 0.25);
-  --text-selection: rgba(105, 124, 160, 0.25);
+  --text-highlight-bg: rgba(113, 122, 139, 0.25);
+  --text-selection: rgba(113, 122, 139, 0.25);
   --text-on-accent: #c9d1d9;
   --interactive-normal: #bebfbf;
   --interactive-hover: #cccaca;
   --interactive-accent-rgb: 21, 146, 255;
   --interactive-accent: #57698a;
-  --interactive-accent-hover: #697ca0;
+  --interactive-accent-hover: #717a8b;
   --scrollbar-active-thumb-bg: #868383;
   --scrollbar-bg: #868383;
   --scrollbar-thumb-bg: #2f3641;
@@ -538,7 +538,7 @@ body .workspace .markdown-preview-view pre[class*=language-] * {
 }
 body .workspace .markdown-preview-view :not(pre) > code[class*=language-] ::selection,
 body .workspace .markdown-preview-view pre[class*=language-] ::selection {
-  background: rgba(105, 124, 160, 0.25);
+  background: rgba(113, 122, 139, 0.25);
 }
 body .workspace .markdown-preview-view :not(pre) > code[class*=language-]::-webkit-scrollbar,
 body .workspace .markdown-preview-view pre[class*=language-]::-webkit-scrollbar {
