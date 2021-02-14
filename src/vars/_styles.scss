@@ -256,7 +256,7 @@
 @mixin style-pre {
   @include style-box-shadow();
 
-  background: var(--background-primary);
+  background: var(--background-secondary);
   border-radius: $border-radius;
   padding: $space-l;
   overflow-x: auto;
