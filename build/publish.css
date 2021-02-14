@@ -481,7 +481,7 @@ body .workspace .markdown-preview-view .internal-link {
 }
 body .workspace .markdown-preview-view .internal-link:hover {
   background: var(--text-selection);
-  border-bottom: 1px dashed var(--text-normal);
+  border-bottom: 1px dashed var(--text-selection);
 }
 body .workspace .markdown-preview-view .external-link {
   transition: all 0.15s ease-in-out;
