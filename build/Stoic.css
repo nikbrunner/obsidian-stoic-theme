@@ -134,10 +134,10 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
   transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 15px 30px rgba(167, 170, 170, 0.5);
   box-shadow: 0 15px 30px transparent;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(30px);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content .view-header {
   background: var(--background-primary);
@@ -152,7 +152,7 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
   box-shadow: 0 15px 30px rgba(167, 170, 170, 0.5);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content {
-  opacity: 0.95;
+  opacity: 0.9;
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
   background: var(--background-primary);
