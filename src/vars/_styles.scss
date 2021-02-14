@@ -82,6 +82,7 @@
 
   &:hover {
     background: $link-color-hover;
+    border-bottom: style-border();
   }
 }
 

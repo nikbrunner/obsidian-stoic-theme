@@ -102,8 +102,8 @@ body {
   --text-accent-hover: #697ca0;
   --text-normal: #364050;
   --text-inline-code: #c2d2dc;
-  --text-muted: #838c96;
-  --text-faint: #838c96;
+  --text-muted: #545c64;
+  --text-faint: #545c64;
   --text-error: #b94f49;
   --text-error-hover: #a85b57;
   --text-highlight-bg: rgba(105, 124, 160, 0.25);
@@ -114,8 +114,8 @@ body {
   --interactive-accent-rgb: 21, 146, 255;
   --interactive-accent: #57698a;
   --interactive-accent-hover: #697ca0;
-  --scrollbar-active-thumb-bg: #838c96;
-  --scrollbar-bg: #838c96;
+  --scrollbar-active-thumb-bg: #545c64;
+  --scrollbar-bg: #545c64;
   --scrollbar-thumb-bg: #2f3641;
   --panel-border-color: #c9d1d9;
   --black: #000000;
@@ -481,6 +481,7 @@ body .workspace .markdown-preview-view .internal-link {
 }
 body .workspace .markdown-preview-view .internal-link:hover {
   background: var(--text-selection);
+  border-bottom: 1px dashed var(--text-normal);
 }
 body .workspace .markdown-preview-view .external-link {
   transition: all 0.15s ease-in-out;
