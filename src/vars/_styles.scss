@@ -37,6 +37,7 @@
 @mixin font-style-h3($view) {
   font-size: var(--font-size-h3);
   font-weight: 600;
+  font-style: italic;
   margin-bottom: 0.5em;
 
   @include sub-theme-specific-font-styles($view);
@@ -132,6 +133,7 @@
     &::after {
       content: '✗';
       color: var(--text-normal);
+      border: style-border(var(--text-normal));
       line-height: $checkbox-size;
       text-align: center;
     }
@@ -181,7 +183,7 @@
   padding: $space-m $space-l;
   margin: $space-l 0;
   border-radius: $border-radius 0 $border-radius 0;
-  border: style-border(transparent);
+  border: 0px;
   overflow: hidden;
 
   & > *:first-child {
@@ -258,11 +260,16 @@
   border-radius: $border-radius;
   padding: $space-l;
   overflow-x: auto;
+  filter: grayscale(25%);
 
   * {
     font-size: var(--font-size-code);
     text-shadow: 0 1px rgba(black, 0.25);
     background: inherit;
+  }
+
+  ::selection {
+    background: $stoic-selection;
   }
 
   &::-webkit-scrollbar {

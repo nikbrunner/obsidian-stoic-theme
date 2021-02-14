@@ -18,7 +18,7 @@ Facilis labore sit occaecati est repellendus. Consequatur neque rerum enim minus
 
 Non accusamus sequi vero quam magni voluptatem corrupti modi. Odit quis quis omnis rerum voluptas suscipit. Eum qui eos facilis dolorem animi. Sunt atque quae dolor perspiciatis ullam. Qui omnis perferendis nulla quidem.
 
-- [ ] One 
+- [x] One 
 - [x] Two `two`
 - [ ] Three 
 

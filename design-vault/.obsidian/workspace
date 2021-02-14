@@ -28,12 +28,34 @@
       {
         "id": "94beb7ffb699e969",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
             "file": "Example Sheet 2.md",
-            "mode": "source"
+            "mode": "preview"
+          }
+        }
+      },
+      {
+        "id": "4df40461e1e93372",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Code.md",
+            "mode": "preview"
+          }
+        }
+      },
+      {
+        "id": "83b5a304d0991356",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Code 2.md",
+            "mode": "preview"
           }
         }
       }
@@ -91,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Example Sheet 2.md",
+                "file": "Code.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,15 +146,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Code.md",
+    "Code 2.md",
     "Example Sheet 2.md",
     "Example Sheet.md",
     "Book.md",
-    "Code.md",
     "Business.md",
     "Untitled.md",
     "Stoic Obsidian Plugin ( Initiale Idee ).m4a.md",
     "Example Sheet 4.md",
-    "Example Sheet 3.md",
-    "Code 2.md"
+    "Example Sheet 3.md"
   ]
 }
