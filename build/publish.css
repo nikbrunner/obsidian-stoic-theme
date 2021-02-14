@@ -102,8 +102,8 @@ body {
   --text-accent-hover: #697ca0;
   --text-normal: #364050;
   --text-inline-code: #c2d2dc;
-  --text-muted: #545c64;
-  --text-faint: #545c64;
+  --text-muted: #a7aaaa;
+  --text-faint: #a7aaaa;
   --text-error: #b94f49;
   --text-error-hover: #a85b57;
   --text-highlight-bg: rgba(105, 124, 160, 0.25);
@@ -399,7 +399,7 @@ body .workspace .markdown-preview-view ul.contains-task-list {
 }
 body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox {
   border-radius: 2.5px;
-  top: 4px;
+  top: 5px;
   filter: none;
   position: relative;
   appearance: none;
