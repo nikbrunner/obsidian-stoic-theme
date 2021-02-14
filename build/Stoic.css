@@ -132,9 +132,9 @@ body {
 
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf {
   transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 15px 30px rgba(167, 170, 170, 0.5);
+  box-shadow: 0 15px 30px rgba(47, 54, 65, 0.5);
   box-shadow: 0 15px 30px transparent;
-  backdrop-filter: blur(30px) brightness(300%);
+  backdrop-filter: blur(30px);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content {
   opacity: 0.9;
@@ -149,7 +149,7 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active {
   transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 15px 30px rgba(167, 170, 170, 0.5);
+  box-shadow: 0 15px 30px rgba(47, 54, 65, 0.5);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content {
   opacity: 0.975;
@@ -442,7 +442,7 @@ body .workspace .markdown-preview-view code:not([class*=language-]) {
 }
 body .workspace .markdown-preview-view blockquote {
   transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 15px 30px rgba(167, 170, 170, 0.5);
+  box-shadow: 0 15px 30px rgba(47, 54, 65, 0.5);
   background: var(--background-secondary);
   position: relative;
   font-size: var(--font-size-text);
@@ -521,7 +521,7 @@ body .workspace .markdown-preview-view .tag {
 body .workspace .markdown-preview-view :not(pre) > code[class*=language-],
 body .workspace .markdown-preview-view pre[class*=language-] {
   transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 15px 30px rgba(167, 170, 170, 0.5);
+  box-shadow: 0 15px 30px rgba(47, 54, 65, 0.5);
   background: var(--background-secondary);
   border-radius: 1rem;
   padding: calc((1rem * 2) * 1);

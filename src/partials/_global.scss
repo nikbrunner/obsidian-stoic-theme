@@ -7,7 +7,7 @@ body {
     & > .workspace-leaf {
       @include style-box-shadow($hidden: true);
 
-      backdrop-filter: blur(30px) brightness(300%);
+      backdrop-filter: blur(30px);
 
       & > .workspace-leaf-content {
         opacity: 0.9;

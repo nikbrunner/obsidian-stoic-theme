@@ -246,7 +246,7 @@
 @mixin style-box-shadow($hidden: false) {
   transition: box-shadow $trans-fast $ease-out-expo;
   box-shadow: 0 15px 30px
-    transparentize($color: $stoic-gray-dark, $amount: 0.5);
+    transparentize($color: $stoic-blue-darkest, $amount: 0.5);
 
   @if $hidden == true {
     box-shadow: 0 15px 30px transparent;
