@@ -1,10 +1,11 @@
-@mixin font-family-header($view) {
-  @if $view == "preview" {
+@mixin sub-theme-specific-font-styles($view) {
+  @if $view == 'preview' {
     font-family: var(--font-preview-header);
-  } @else if $view == "editor" {
+  } @else if $view == 'editor' {
     font-family: var(--font-mono);
-  } @else if $view == "book" {
+  } @else if $view == 'book' {
     font-family: var(--font-preview-book-header);
+    text-align: center;
   }
 
   .internal-link {
@@ -13,65 +14,59 @@
 }
 
 @mixin font-style-h1($view) {
-  @include font-family-header($view);
-
   font-size: var(--font-size-h1);
   font-weight: 900;
   line-height: var(--line-height-header);
   margin-bottom: 0.5em;
 
+  @include sub-theme-specific-font-styles($view);
   @content;
 }
 
 @mixin font-style-h2($view) {
-  @include font-family-header($view);
-
   font-size: var(--font-size-h2);
   font-weight: 600;
   border-bottom: style-border();
   padding-bottom: 0.25em;
   margin: 0.75em 0 0.35em;
 
+  @include sub-theme-specific-font-styles($view);
   @content;
 }
 
 @mixin font-style-h3($view) {
-  @include font-family-header($view);
-
   font-size: var(--font-size-h3);
   font-weight: 600;
   margin-bottom: 0.5em;
 
+  @include sub-theme-specific-font-styles($view);
   @content;
 }
 
 @mixin font-style-h4($view) {
-  @include font-family-header($view);
-
   font-size: var(--font-size-h4);
   font-weight: 500;
   margin-bottom: 0.5em;
 
+  @include sub-theme-specific-font-styles($view);
   @content;
 }
 
 @mixin font-style-h5($view) {
-  @include font-family-header($view);
-
   font-size: var(--font-size-h5);
   font-weight: 500;
   margin-bottom: 0.5em;
 
+  @include sub-theme-specific-font-styles($view);
   @content;
 }
 
 @mixin font-style-h6($view) {
-  @include font-family-header($view);
-
   font-size: var(--font-size-h6);
   font-weight: 500;
   margin-bottom: 0.5em;
 
+  @include sub-theme-specific-font-styles($view);
   @content;
 }
 
@@ -81,9 +76,7 @@
   $link-color-hover: var(--text-selection);
 
   text-decoration: none;
-  // font-weight: bold;
   color: $link-color;
-  // border-bottom: 1px dashed $link-color;
   transition: all $trans-fast ease-in-out;
 
   &:hover {
@@ -120,7 +113,7 @@
   transition: all $trans-base ease-in-out;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -137,7 +130,7 @@
     background: var(--background-primary-alt);
 
     &::after {
-      content: "✗";
+      content: '✗';
       color: var(--text-normal);
       line-height: $checkbox-size;
       text-align: center;
@@ -161,11 +154,11 @@
 }
 
 @mixin style-inline-code($view) {
-  @if $view == "source" {
+  @if $view == 'source' {
     color: var(--text-inline-code);
   }
 
-  @if $view == "preview" {
+  @if $view == 'preview' {
     background: var(--background-primary-alt);
     color: var(--text-inline-code);
     font-family: var(--font-monospace);
@@ -180,6 +173,7 @@
 @mixin style-blockquote {
   @include style-box-shadow();
 
+  background: var(--background-secondary);
   position: relative;
   font-size: var(--font-size-text);
   font-family: var(--font-sans);
@@ -205,9 +199,9 @@
     position: absolute;
     top: calc(#{$quote-size} / -1.75);
     left: calc(#{$quote-size} / -10);
-    content: "❜";
+    content: '❜';
     font-size: $quote-size;
-    color: var(--background-ternary);
+    color: var(--text-normal);
     opacity: 0.25;
   }
 
@@ -250,7 +244,7 @@
 @mixin style-box-shadow($hidden: false) {
   transition: box-shadow $trans-fast $ease-out-expo;
   box-shadow: 0 15px 30px
-    transparentize($color: $stoic-beige-dark, $amount: 0.5);
+    transparentize($color: $stoic-gray-dark, $amount: 0.5);
 
   @if $hidden == true {
     box-shadow: 0 15px 30px transparent;
@@ -266,7 +260,8 @@
   overflow-x: auto;
 
   * {
-    text-shadow: none;
+    font-size: var(--font-size-code);
+    text-shadow: 0 1px rgba(black, 0.25);
     background: inherit;
   }
 

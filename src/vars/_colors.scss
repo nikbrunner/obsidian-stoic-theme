@@ -1,27 +1,37 @@
-$color-white: #ffffff;
-
-$stoic-white: #f0f4f8;
 $stoic-white-dark: #c9d1d9;
+$stoic-white: #f0f4f8;
 
-$stoic-beige-light: #c3c3c3;
-$stoic-beige: #bebfbf;
-$stoic-beige-dark: #838c96;
+// $stoic-gray-dark: #838c96;
+$stoic-gray-dark: #a7aaaa;
+$stoic-gray: #bebfbf;
+$stoic-gray-light: #cccaca;
 
-$stoic-gray: #93979b;
-$stoic-gray-dark: #5c6268;
+$stoic-beige: #8c8184;
+$stoic-beige-light: #bbb7b7;
 
-$stoic-green-light: #86b98d;
+$stoic-green-dark: #364033;
 $stoic-green: #618d69;
+$stoic-green-light: #86b98d;
 
 $stoic-orange: #c7a971;
 
-$stoic-blue-light: #697ca0;
-$stoic-blue: #57698a;
-$stoic-blue-dark: #364050;
+$stoic-yellow: #dac153;
+
 $stoic-blue-darkest: #2f3641;
+$stoic-blue-dark: #364050;
+// $stoic-blue: #394d73;
+$stoic-blue: #57698a;
+$stoic-blue-light: #697ca0;
+$stoic-blue-lightest: #c2d2dc;
 
-$stoic-cyan-light: #c2d2dc;
+$stoic-aqua-dark: #3f4f59;
+$stoic-aqua: #57768a;
+$stoic-aqua-light: #829eb1;
 
+$stoic-red-dark: #8d3531;
 $stoic-red: #b94f49;
+$stoic-red-light: #a85b57;
 
-$color-black: #000000;
+$stoic-black: #000000;
+
+$stoic-selection: transparentize($stoic-blue-light, 0.75);

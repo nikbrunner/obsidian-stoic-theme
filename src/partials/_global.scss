@@ -29,6 +29,8 @@ body {
         @include style-box-shadow();
 
         & > .workspace-leaf-content {
+          opacity: 0.98;
+
           & > .view-header {
             background: var(--background-primary);
             border-right: style-border(transparent);

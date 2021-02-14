@@ -22,12 +22,13 @@ body {
   --font-size-h1: 32px;
   --font-size-h2: 26px;
   --font-size-h3: 22px;
-  --font-size-h4: 16px;
-  --font-size-h5: 14px;
-  --font-size-h6: 10px;
+  --font-size-h4: 18px;
+  --font-size-h5: 16px;
+  --font-size-h6: 16px;
   --font-size-text: 16px;
   --font-size-text--book: 16px;
   --font-size-tag: 12px;
+  --font-size-code: 14px;
   --font-size-inline-code: 14px;
 
   --line-height-header: 1;
@@ -43,7 +44,7 @@ body {
   --background-ternary: #{$stoic-blue};
   --background-ternary-alt: #{$stoic-blue-dark};
   --background-accent: #{$stoic-blue-light};
-  --background-modifier-border: #{$stoic-beige-dark};
+  --background-modifier-border: #{$stoic-gray-dark};
   --background-modifier-form-field: rgba(0, 0, 0, 0.3);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
@@ -55,7 +56,7 @@ body {
   --text-accent: #{$stoic-blue};
   --text-accent-hover: #{$stoic-blue-light};
   --text-normal: #{$stoic-white-dark};
-  --text-inline-code: #{$stoic-cyan-light};
+  --text-inline-code: #{$stoic-blue-light};
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
   --text-error: #e16d76;
@@ -87,14 +88,14 @@ body {
 }
 
 .theme-light {
-  --background-primary: #{$stoic-beige};
-  --background-primary-alt: #{$stoic-beige-dark};
-  --background-secondary: #{$stoic-beige-light};
-  --background-secondary-alt: #{$stoic-beige-light};
-  --background-ternary: #{$stoic-blue};
-  --background-ternary-alt: #{$stoic-blue-dark};
-  --background-accent: #{$stoic-beige-light};
-  --background-modifier-border: #{$stoic-beige-dark};
+  --background-primary: #{$stoic-gray};
+  --background-primary-alt: #{$stoic-gray-dark};
+  --background-secondary: #{$stoic-gray-light};
+  --background-secondary-alt: #{$stoic-gray-light};
+  --background-ternary: #{$stoic-beige-light};
+  --background-ternary-alt: #{$stoic-beige};
+  --background-accent: #{$stoic-gray-light};
+  --background-modifier-border: #{$stoic-gray-dark};
   --background-modifier-form-field: #fff;
   --background-modifier-form-field-highlighted: #fff;
   --background-modifier-box-shadow: rgba(#{$stoic-blue-dark}, 0.75);
@@ -106,13 +107,13 @@ body {
   --text-accent: #{$stoic-blue};
   --text-accent-hover: #{$stoic-blue-light};
   --text-normal: #{$stoic-blue-dark};
-  --text-inline-code: #{$stoic-cyan-light};
-  --text-muted: #{$stoic-beige-dark};
-  --text-faint: #999999;
-  --text-error: #e75545;
-  --text-error-hover: #f86959;
+  --text-inline-code: #{$stoic-blue-lightest};
+  --text-muted: #{$stoic-gray-dark};
+  --text-faint: #{$stoic-gray-dark};
+  --text-error: #{$stoic-red};
+  --text-error-hover: #{$stoic-red-light};
   --text-highlight-bg: rgba(255, 255, 0, 0.4);
-  --text-selection: rgba(0, 122, 255, 0.15);
+  --text-selection: #{$stoic-selection};
   --text-on-accent: #f2f2f2;
   --interactive-normal: #eaeaeb;
   --interactive-hover: #dbdbdc;
@@ -124,15 +125,15 @@ body {
   --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
   --panel-border-color: #dbdbdc;
 
-  --black: #000000;
-  --gray-1: #5c6370;
-  --gray-2: #abb2bf;
-  --red: #e06c75;
-  --orange: #d19a66;
+  --black: #{$stoic-black};
+  --gray-1: #{$stoic-gray};
+  --gray-2: #{$stoic-gray-light};
+  --red: #{$stoic-red};
+  --orange: #{$stoic-orange};
   --green: #{$stoic-green};
-  --aqua: #56b6c2;
-  --purple: #c678dd;
-  --blue: #61afef;
-  --yellow: #e5c07b;
-  --white: #ffffff;
+  --aqua: #{$stoic-aqua};
+  --purple: #{$stoic-beige};
+  --blue: #{$stoic-blue};
+  --yellow: #{$stoic-yellow};
+  --white: #{$stoic-white};
 }
