@@ -28,6 +28,7 @@
       {
         "id": "94beb7ffb699e969",
         "type": "leaf",
+        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -39,7 +40,6 @@
       {
         "id": "4df40461e1e93372",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -113,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Code.md",
+                "file": "Example Sheet 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,9 +146,9 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Example Sheet 2.md",
     "Code.md",
     "Code 2.md",
-    "Example Sheet 2.md",
     "Example Sheet.md",
     "Book.md",
     "Business.md",
