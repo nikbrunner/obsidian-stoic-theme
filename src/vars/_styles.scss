@@ -294,4 +294,6 @@
 
 @mixin style-popover {
   @include style-box-shadow();
+
+  padding: $space-l;
 }
