@@ -291,3 +291,7 @@
     box-shadow: none;
   }
 }
+
+@mixin style-popover {
+  @include style-box-shadow();
+}

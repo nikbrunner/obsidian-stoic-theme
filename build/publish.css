@@ -236,6 +236,10 @@ body .markdown-preview-view li {
   font-size: var(--font-size-text);
   line-height: var(--line-height-text);
 }
+body .popover {
+  transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 30px rgba(47, 54, 65, 0.25);
+}
 
 body .markdown-source-view {
   font-family: var(--font-monospace);
