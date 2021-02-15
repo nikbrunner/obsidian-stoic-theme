@@ -11,7 +11,7 @@ body {
       transition: all $trans-fast $ease-out-expo;
 
       & > .workspace-leaf-content {
-        opacity: 0.9;
+        opacity: 0.95;
 
         .view-header {
           background: var(--background-primary);
