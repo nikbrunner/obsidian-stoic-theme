@@ -152,7 +152,7 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
   box-shadow: 0 15px 30px rgba(47, 54, 65, 0.25);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content {
-  opacity: 0.975;
+  opacity: 1;
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
   background: var(--background-primary);
