@@ -8,7 +8,7 @@ body {
       @include style-box-shadow($hidden: true);
 
       backdrop-filter: blur(3px);
-      transition: all $trans-base $ease-out-expo;
+      transition: all $trans-fast $ease-out-expo;
 
       & > .workspace-leaf-content {
         opacity: 0.9;
