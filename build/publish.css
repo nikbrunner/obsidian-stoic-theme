@@ -477,19 +477,19 @@ body .workspace .markdown-preview-view blockquote * {
 body .workspace .markdown-preview-view .internal-link {
   text-decoration: none;
   color: var(--text-accent);
-  transition: all 0.15s ease-in-out;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 body .workspace .markdown-preview-view .internal-link:hover {
   background: var(--text-selection);
-  border-bottom: 1px dashed var(--text-selection);
+  border-bottom: 1px dashed var(--text-normal);
 }
 body .workspace .markdown-preview-view .external-link {
-  transition: all 0.15s ease-in-out;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
   color: var(--text-normal);
   background-image: none;
 }
 body .workspace .markdown-preview-view .external-link:hover {
-  opacity: 0.75;
+  color: var(--text-accent);
 }
 body .workspace .markdown-preview-view .markdown-embed {
   border: 1px solid var(--background-modifier-border);

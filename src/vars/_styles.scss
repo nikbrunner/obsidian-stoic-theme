@@ -78,11 +78,11 @@
 
   text-decoration: none;
   color: $link-color;
-  transition: all $trans-fast ease-in-out;
+  transition: all $trans-fast $ease-out-expo;
 
   &:hover {
     background: $link-color-hover;
-    border-bottom: style-border($link-color-hover);
+    border-bottom: style-border(var(--text-normal));
   }
 }
 
@@ -94,12 +94,12 @@
 
 // TODO Improve Styling
 @mixin style-external-link() {
-  transition: all $trans-fast ease-in-out;
+  transition: all $trans-fast $ease-out-expo;
   color: var(--text-normal);
   background-image: none;
 
   &:hover {
-    opacity: 0.75;
+    color: var(--text-accent);
   }
 }
 
