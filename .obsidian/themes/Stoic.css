@@ -1,11 +1,10 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 body {
   --default-font: "Helvetica", -apple-system, BlinkMacSystemFont, Segoe UI,
     Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --font-default: var(--default-font);
-  --font-monospace: "JetBrains Mono", monospace;
+  --font-monospace: "SF Mono", monospace;
   --font-sans: var(--default-font), sans-serif;
   --font-serif: "Lora", serif;
   --font-serif-book: "Lora", serif;
@@ -567,18 +566,4 @@ body .workspace .markdown-preview-view pre[class*=language-] {
 }
 body .workspace .markdown-preview-view .frontmatter-container {
   background: var(--background-primary);
-}
-
-body .render-container .publish-renderer {
-  opacity: 0.95;
-}
-body .render-container .publish-renderer .extra-title {
-  opacity: 1;
-  color: var(--text-normal);
-}
-body .render-container .publish-renderer .extra-title:hover {
-  color: var(--text-accent);
-}
-body .site-footer {
-  display: none;
 }
