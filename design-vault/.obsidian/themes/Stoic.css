@@ -32,12 +32,12 @@ body {
 
 .theme-dark {
   --background-primary: #2f3641;
-  --background-primary-alt: #697ca0;
+  --background-primary-alt: #717a8b;
   --background-secondary: #20242b;
   --background-secondary-alt: #1a1e24;
   --background-ternary: #57698a;
   --background-ternary-alt: #364050;
-  --background-accent: #697ca0;
+  --background-accent: #717a8b;
   --background-modifier-border: #a7aaaa;
   --background-modifier-form-field: rgba(0, 0, 0, 0.3);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
@@ -48,9 +48,9 @@ body {
   --background-modifier-error-hover: #470000;
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #57698a;
-  --text-accent-hover: #697ca0;
+  --text-accent-hover: #717a8b;
   --text-normal: #c9d1d9;
-  --text-inline-code: #697ca0;
+  --text-inline-code: #717a8b;
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
   --text-error: #e16d76;
@@ -98,23 +98,23 @@ body {
   --background-modifier-error-hover: #b94f49;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: #57698a;
-  --text-accent-hover: #697ca0;
+  --text-accent-hover: #717a8b;
   --text-normal: #364050;
-  --text-inline-code: #c2d2dc;
-  --text-muted: #838c96;
-  --text-faint: #838c96;
+  --text-inline-code: #c8d2d8;
+  --text-muted: #717a8b;
+  --text-faint: #717a8b;
   --text-error: #b94f49;
   --text-error-hover: #a85b57;
-  --text-highlight-bg: rgba(105, 124, 160, 0.25);
-  --text-selection: rgba(105, 124, 160, 0.25);
+  --text-highlight-bg: rgba(113, 122, 139, 0.25);
+  --text-selection: rgba(113, 122, 139, 0.25);
   --text-on-accent: #c9d1d9;
   --interactive-normal: #bebfbf;
   --interactive-hover: #cccaca;
   --interactive-accent-rgb: 21, 146, 255;
   --interactive-accent: #57698a;
-  --interactive-accent-hover: #697ca0;
-  --scrollbar-active-thumb-bg: #838c96;
-  --scrollbar-bg: #838c96;
+  --interactive-accent-hover: #717a8b;
+  --scrollbar-active-thumb-bg: #868383;
+  --scrollbar-bg: #868383;
   --scrollbar-thumb-bg: #2f3641;
   --panel-border-color: #c9d1d9;
   --black: #000000;
@@ -132,12 +132,13 @@ body {
 
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf {
   transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 15px 30px rgba(167, 170, 170, 0.5);
+  box-shadow: 0 15px 30px rgba(47, 54, 65, 0.25);
   box-shadow: 0 15px 30px transparent;
-  backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(3px);
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content {
-  opacity: 0.7;
+  opacity: 0.95;
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content .view-header {
   background: var(--background-primary);
@@ -149,10 +150,10 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active {
   transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 15px 30px rgba(167, 170, 170, 0.5);
+  box-shadow: 0 15px 30px rgba(47, 54, 65, 0.25);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content {
-  opacity: 0.85;
+  opacity: 1;
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
   background: var(--background-primary);
@@ -234,6 +235,11 @@ body .markdown-preview-view span,
 body .markdown-preview-view li {
   font-size: var(--font-size-text);
   line-height: var(--line-height-text);
+}
+body .popover {
+  transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 30px rgba(47, 54, 65, 0.25);
+  padding: calc((1rem * 2) * 1);
 }
 
 body .markdown-source-view {
@@ -398,7 +404,7 @@ body .workspace .markdown-preview-view ul.contains-task-list {
 }
 body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox {
   border-radius: 2.5px;
-  top: 4px;
+  top: 5px;
   filter: none;
   position: relative;
   appearance: none;
@@ -413,7 +419,7 @@ body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .ta
   bottom: 0;
   border-radius: 2.5px;
   background: var(--background-primary);
-  border: 1px dashed var(--background-primary-alt);
+  border: 1px dashed var(--text-normal);
   width: 14px;
   height: 14px;
 }
@@ -423,7 +429,6 @@ body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .ta
 body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox:checked::after {
   content: "✗";
   color: var(--text-normal);
-  border: 1px dashed var(--text-normal);
   line-height: 14px;
   text-align: center;
 }
@@ -442,7 +447,7 @@ body .workspace .markdown-preview-view code:not([class*=language-]) {
 }
 body .workspace .markdown-preview-view blockquote {
   transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 15px 30px rgba(167, 170, 170, 0.5);
+  box-shadow: 0 15px 30px rgba(47, 54, 65, 0.25);
   background: var(--background-secondary);
   position: relative;
   font-size: var(--font-size-text);
@@ -476,18 +481,19 @@ body .workspace .markdown-preview-view blockquote * {
 body .workspace .markdown-preview-view .internal-link {
   text-decoration: none;
   color: var(--text-accent);
-  transition: all 0.15s ease-in-out;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 body .workspace .markdown-preview-view .internal-link:hover {
   background: var(--text-selection);
+  border-bottom: 1px dashed var(--text-accent);
 }
 body .workspace .markdown-preview-view .external-link {
-  transition: all 0.15s ease-in-out;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
   color: var(--text-normal);
   background-image: none;
 }
 body .workspace .markdown-preview-view .external-link:hover {
-  opacity: 0.75;
+  color: var(--text-accent);
 }
 body .workspace .markdown-preview-view .markdown-embed {
   border: 1px solid var(--background-modifier-border);
@@ -521,8 +527,8 @@ body .workspace .markdown-preview-view .tag {
 body .workspace .markdown-preview-view :not(pre) > code[class*=language-],
 body .workspace .markdown-preview-view pre[class*=language-] {
   transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 15px 30px rgba(167, 170, 170, 0.5);
-  background: var(--background-primary);
+  box-shadow: 0 15px 30px rgba(47, 54, 65, 0.25);
+  background: var(--background-secondary);
   border-radius: 1rem;
   padding: calc((1rem * 2) * 1);
   overflow-x: auto;
@@ -536,7 +542,7 @@ body .workspace .markdown-preview-view pre[class*=language-] * {
 }
 body .workspace .markdown-preview-view :not(pre) > code[class*=language-] ::selection,
 body .workspace .markdown-preview-view pre[class*=language-] ::selection {
-  background: rgba(105, 124, 160, 0.25);
+  background: rgba(113, 122, 139, 0.25);
 }
 body .workspace .markdown-preview-view :not(pre) > code[class*=language-]::-webkit-scrollbar,
 body .workspace .markdown-preview-view pre[class*=language-]::-webkit-scrollbar {

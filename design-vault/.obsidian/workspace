@@ -6,10 +6,11 @@
       {
         "id": "90e58733a5f0704c",
         "type": "leaf",
+        "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book.md",
+            "file": "Example Sheet 2.md",
             "mode": "preview"
           }
         }
@@ -28,7 +29,6 @@
       {
         "id": "94beb7ffb699e969",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -147,10 +147,10 @@
   },
   "lastOpenFiles": [
     "Example Sheet 2.md",
-    "Code.md",
-    "Code 2.md",
     "Example Sheet.md",
     "Book.md",
+    "Code.md",
+    "Code 2.md",
     "Business.md",
     "Untitled.md",
     "Stoic Obsidian Plugin ( Initiale Idee ).m4a.md",

@@ -419,7 +419,7 @@ body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .ta
   bottom: 0;
   border-radius: 2.5px;
   background: var(--background-primary);
-  border: 1px dashed var(--background-primary-alt);
+  border: 1px dashed var(--text-normal);
   width: 14px;
   height: 14px;
 }
@@ -429,7 +429,6 @@ body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .ta
 body .workspace .markdown-preview-view ul.contains-task-list .task-list-item .task-list-item-checkbox:checked::after {
   content: "✗";
   color: var(--text-normal);
-  border: 1px dashed var(--text-normal);
   line-height: 14px;
   text-align: center;
 }

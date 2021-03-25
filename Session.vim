@@ -16,16 +16,18 @@ let NERDTreeAutoDeleteBuffer =  0
 let NERDTreeMapRefresh = "r"
 let NERDTreeGitStatusShowClean = "0"
 let NERDTreeMapHelp = "?"
+let Lf_PopupColorscheme = "gruvbox_material"
 let NERDTreeBookmarksFile = "/Users/nibru/.NERDTreeBookmarks"
 let NERDTreeWinSize =  31 
 let NERDTreeMenuUp = "k"
 let DevIconsEnableFoldersOpenClose =  0 
+let VM_Extend_hl = "Visual"
 let NERDTreeUseTCD =  0 
 let NERDTreeGitStatusUseNerdFonts = "0"
 let NERDTreeMapToggleFilters = "f"
-let DevIconsEnableFolderExtensionPatternMatching =  0 
 let DevIconsEnableDistro =  1 
 let NERDTreeMapPreview = "go"
+let NERDTreeCascadeSingleChildDir =  1 
 let Taboo_tabs = "1	Stoic\n2	Vars\n3	Styles\n4	Global\n5	Source View\n6	Preview View\n7	Compiled\n"
 let NERDTreeNotificationThreshold =  100 
 let NERDTreeMapActivateNode = "o"
@@ -42,11 +44,14 @@ let NERDTreeMapOpenInTabSilent = "T"
 let NERDTreeCopyCmd = "cp -r "
 let NERDTreeMapJumpParent = "p"
 let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
+let VM_Insert_hl = "Cursor"
 let NERDTreeCascadeOpenSingleChildDir =  1 
 let NERDTreeMapJumpPrevSibling = "<C-k>"
 let WebDevIconsTabAirLineAfterGlyphPadding = ""
 let NERDTreeNodeDelimiter = ""
 let NERDTreeShowBookmarks =  0 
+let VM_Mono_hl = "Cursor"
+let NERDTreeMapOpenExpl = "e"
 let NERDTreeRemoveDirCmd = "rm -rf "
 let DevIconsArtifactFixChar = " "
 let NERDTreeMouseMode =  1 
@@ -58,11 +63,13 @@ let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
 let NERDTreeShowFiles =  1 
 let NERDTreeMapOpenVSplit = "s"
 let NERDTreeGitStatusEnable = "1"
+let NERDTreeMapOpenSplit = "i"
 let NERDTreeGitStatusUpdateOnCursorHold = "1"
 let NERDTreeDirArrowCollapsible = "▾"
 let NERDTreeCaseSensitiveSort =  0 
 let DevIconsEnableNERDTreeRedraw =  0 
 let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
+let NERDTreeMapPreviewVSplit = "gs"
 let NERDTreeBookmarksSort =  1 
 let NERDTreeHighlightCursorline =  1 
 let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
@@ -72,6 +79,7 @@ let WebDevIconsUnicodeDecorateFolderNodes =  1
 let NERDTreeRespectWildIgnore =  0 
 let NERDTreeGitStatusAlignIfConceal = "1"
 let NERDTreeMapCWD = "CD"
+let Lf_StlColorscheme = "gruvbox_material"
 let WebDevIconsNerdTreeBeforeGlyphPadding = " "
 let NERDTreeMapOpenInTab = "t"
 let NERDTreeNaturalSort =  0 
@@ -94,18 +102,16 @@ let NERDTreeAutoCenterThreshold =  3
 let NERDTreeUpdateOnCursorHold =  1 
 let NERDTreeMapJumpNextSibling = "<C-j>"
 let DevIconsDefaultFolderOpenSymbol = ""
-let NERDTreeMapPreviewVSplit = "gs"
 let NERDTreeMapQuit = "q"
 let NERDTreeMapChangeRoot = "C"
 let NERDTreeSortDirs =  1 
-let NERDTreeMapOpenSplit = "i"
 let NERDTreeMapToggleFiles = "F"
+let DevIconsEnableFolderExtensionPatternMatching =  0 
 let NERDTreeGitStatusNodeColorization =  1 
 let NERDTreeGitStatusMapPrevHunk = "[c"
-let NERDTreeMapOpenExpl = "e"
 let NERDTreeMapJumpFirstChild = "K"
 let NERDTreeGlyphReadOnly = "RO"
-let NERDTreeCascadeSingleChildDir =  1 
+let VM_Cursor_hl = "Cursor"
 let NERDTreeMapOpenRecursively = "O"
 let NERDTreeGitStatusDirDirtyOnly = "1"
 let NERDTreeGitStatusUpdateOnWrite = "1"
@@ -146,8 +152,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 156 + 156) / 313)
-exe 'vert 2resize ' . ((&columns * 156 + 156) / 313)
+exe 'vert 1resize ' . ((&columns * 155 + 155) / 310)
+exe 'vert 2resize ' . ((&columns * 154 + 155) / 310)
 argglobal
 setlocal fdm=indent
 setlocal fde=0
@@ -157,7 +163,7 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 5 - ((4 * winheight(0) + 28) / 56)
+let s:l = 5 - ((4 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -174,7 +180,7 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 11 - ((10 * winheight(0) + 28) / 56)
+let s:l = 11 - ((9 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -182,8 +188,8 @@ normal! zt
 normal! 0
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
-exe 'vert 1resize ' . ((&columns * 156 + 156) / 313)
-exe 'vert 2resize ' . ((&columns * 156 + 156) / 313)
+exe 'vert 1resize ' . ((&columns * 155 + 155) / 310)
+exe 'vert 2resize ' . ((&columns * 154 + 155) / 310)
 tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_custom-properties.scss
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -195,8 +201,7 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 156 + 156) / 313)
-exe 'vert 2resize ' . ((&columns * 156 + 156) / 313)
+wincmd =
 argglobal
 setlocal fdm=indent
 setlocal fde=0
@@ -208,9 +213,7 @@ setlocal fdn=20
 setlocal fen
 6
 normal! zo
-39
-normal! zc
-let s:l = 89 - ((85 * winheight(0) + 28) / 56)
+let s:l = 89 - ((25 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -228,7 +231,7 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 20 - ((19 * winheight(0) + 28) / 56)
+let s:l = 20 - ((19 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -237,8 +240,7 @@ normal! 0
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 156 + 156) / 313)
-exe 'vert 2resize ' . ((&columns * 156 + 156) / 313)
+wincmd =
 tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/vars/_styles.scss
 set splitbelow splitright
 wincmd t
@@ -255,19 +257,19 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-181
+177
 normal! zo
-194
+191
 normal! zo
-224
+221
 normal! zo
-233
+230
 normal! zo
-239
+236
 normal! zo
-261
+258
 normal! zo
-let s:l = 149 - ((28 * winheight(0) + 28) / 56)
+let s:l = 149 - ((27 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -290,12 +292,12 @@ setlocal fdl=8
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 20 - ((19 * winheight(0) + 28) / 56)
+let s:l = 20 - ((19 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 20
-normal! 022|
+normal! 0
 lcd ~/Documents/dev/repositories/own/obsidian-stoic-theme
 tabedit ~/Documents/dev/repositories/own/obsidian-stoic-theme/src/partials/_markdown-source-view.scss
 set splitbelow splitright
@@ -317,7 +319,7 @@ setlocal fen
 normal! zo
 5
 normal! zo
-let s:l = 10 - ((9 * winheight(0) + 28) / 56)
+let s:l = 10 - ((9 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -354,7 +356,7 @@ normal! zc
 normal! zo
 83
 normal! zo
-let s:l = 2 - ((1 * winheight(0) + 28) / 56)
+let s:l = 2 - ((1 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -377,7 +379,7 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 17 - ((16 * winheight(0) + 28) / 56)
+let s:l = 17 - ((16 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
