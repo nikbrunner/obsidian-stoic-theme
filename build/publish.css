@@ -264,6 +264,7 @@ body .workspace .markdown-preview-view.book h1 {
   font-weight: 900;
   line-height: var(--line-height-header);
   margin-bottom: 0.5em;
+  color: red;
   font-family: var(--font-preview-book-header);
   text-align: center;
 }
@@ -336,6 +337,7 @@ body .workspace .markdown-preview-view h1 {
   font-weight: 900;
   line-height: var(--line-height-header);
   margin-bottom: 0.5em;
+  color: red;
   font-family: var(--font-preview-header);
 }
 body .workspace .markdown-preview-view h1 .internal-link {
