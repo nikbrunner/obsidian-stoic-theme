@@ -18,6 +18,7 @@
   font-weight: 900;
   line-height: var(--line-height-header);
   margin-bottom: 0.5em;
+  color: green;
 
   @include sub-theme-specific-font-styles($view);
   @content;
