@@ -26,3 +26,7 @@ All I need to do is..
 ```sh
 npm run dist && update.sh --stoic
 ```
+
+## Todo
+
+[Please see here: TODO.md](./TODO.md)
