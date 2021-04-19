@@ -283,7 +283,6 @@ body .workspace .markdown-preview-view.book h2 .internal-link {
 body .workspace .markdown-preview-view.book h3 {
   font-size: var(--font-size-h3);
   font-weight: 600;
-  font-style: italic;
   margin-bottom: 0.5em;
   font-family: var(--font-preview-book-header);
   text-align: center;
@@ -353,7 +352,6 @@ body .workspace .markdown-preview-view h2 .internal-link {
 body .workspace .markdown-preview-view h3 {
   font-size: var(--font-size-h3);
   font-weight: 600;
-  font-style: italic;
   margin-bottom: 0.5em;
   font-family: var(--font-preview-header);
 }
