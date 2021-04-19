@@ -1,9 +1,9 @@
 @mixin sub-theme-specific-font-styles($view) {
-  @if $view == 'preview' {
+  @if $view == "preview" {
     font-family: var(--font-preview-header);
-  } @else if $view == 'editor' {
+  } @else if $view == "editor" {
     font-family: var(--font-mono);
-  } @else if $view == 'book' {
+  } @else if $view == "book" {
     font-family: var(--font-preview-book-header);
     text-align: center;
   }
@@ -37,7 +37,6 @@
 @mixin font-style-h3($view) {
   font-size: var(--font-size-h3);
   font-weight: 600;
-  font-style: italic;
   margin-bottom: 0.5em;
 
   @include sub-theme-specific-font-styles($view);
@@ -115,7 +114,7 @@
   transition: all $trans-base ease-in-out;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -132,7 +131,7 @@
     background: var(--background-primary-alt);
 
     &::after {
-      content: '✗';
+      content: "✗";
       color: var(--text-normal);
       line-height: $checkbox-size;
       text-align: center;
@@ -156,11 +155,11 @@
 }
 
 @mixin style-inline-code($view) {
-  @if $view == 'source' {
+  @if $view == "source" {
     color: var(--text-inline-code);
   }
 
-  @if $view == 'preview' {
+  @if $view == "preview" {
     background: var(--background-primary-alt);
     color: var(--text-inline-code);
     font-family: var(--font-monospace);
@@ -201,7 +200,7 @@
     position: absolute;
     top: calc(#{$quote-size} / -1.75);
     left: calc(#{$quote-size} / -10);
-    content: '❜';
+    content: "❜";
     font-size: $quote-size;
     color: var(--text-normal);
     opacity: 0.25;
