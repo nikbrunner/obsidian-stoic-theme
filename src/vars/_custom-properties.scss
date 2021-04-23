@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Galdeano&display=swap");
 @import "styles";
 @import "vars";
 @import "colors";
 
 body {
-  --default-font: "Candara", "Helvetica", -apple-system, BlinkMacSystemFont,
+  --default-font: "Galdeano", "Helvetica", -apple-system, BlinkMacSystemFont,
     Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --font-default: var(--default-font);
   --font-monospace: "JetBrains Mono", monospace;
