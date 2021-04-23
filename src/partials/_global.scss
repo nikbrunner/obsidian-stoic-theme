@@ -1,4 +1,7 @@
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   // Sliding panes
   &.plugin-sliding-panes-rotate-header div.workspace > .mod-root {
     $leaf-border-style: 1px dashed;

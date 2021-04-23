@@ -131,6 +131,10 @@ body {
   --white: #f0f4f8;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf {
   transition: box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 15px 30px rgba(47, 54, 65, 0.25);
