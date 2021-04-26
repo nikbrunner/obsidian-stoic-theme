@@ -1,5 +1,5 @@
-@import 'mixins';
-@import 'vars';
+@import "mixins";
+@import "vars";
 
 body {
   &.minimal-theme {
@@ -66,7 +66,7 @@ body {
     }
 
     .jl.popover {
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
       background: var(--background-primary);
       border-color: var(--text-accent);
       color: var(--text-accent);
@@ -136,7 +136,7 @@ body {
         border-radius: $border-radius;
 
         @media screen {
-          box-shadow: $box-shadow;
+          // box-shadow: $box-shadow;
         }
       }
 

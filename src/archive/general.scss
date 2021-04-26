@@ -1,4 +1,4 @@
-@import 'vars';
+@import "vars";
 
 // TODO Sassize
 .modal.mod-settings {
@@ -43,7 +43,7 @@ span.cm-hashtag.cm-hashtag-end {
 
 body {
   .markdown-preview-view {
-    input[type='checkbox'] {
+    input[type="checkbox"] {
       border-radius: 3px !important;
     }
   }
@@ -79,8 +79,7 @@ body {
 /* Add Shadow to the side panes */
 .mod-right:not(.is-collapsed) ~ .workspace-split.mod-right-split,
 .app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split,
-.app-container.is-right-sidedock-collapsed
-  .workspace-split.mod-right-split {
-  box-shadow: $box-shadow;
+.app-container.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+  // box-shadow: $box-shadow;
   z-index: 2;
 }

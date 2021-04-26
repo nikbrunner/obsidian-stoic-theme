@@ -25,10 +25,11 @@
 
 @mixin font-style-h2($view) {
   font-size: var(--font-size-h2);
+  line-height: var(--line-height-header);
   font-weight: 600;
   border-bottom: style-border();
-  padding-bottom: 0.25em;
-  margin: 0.75em 0 0.35em;
+  padding-bottom: 0.5em;
+  margin: 0.75em 0 1em;
 
   @include sub-theme-specific-font-styles($view);
   @content;
@@ -172,7 +173,7 @@
 }
 
 @mixin style-blockquote {
-  @include style-box-shadow();
+  // @include style-box-shadow();
 
   background: var(--background-secondary);
   position: relative;
@@ -253,7 +254,7 @@
 }
 
 @mixin style-pre {
-  @include style-box-shadow();
+  // @include style-box-shadow();
 
   background: var(--background-secondary);
   border-radius: $border-radius;
@@ -291,7 +292,7 @@
 }
 
 @mixin style-popover {
-  @include style-box-shadow();
+  // @include style-box-shadow();
 
   padding: $space-l;
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Galdeano&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marko+One&display=swap");
 @import "styles";
 @import "vars";
 @import "colors";
@@ -9,13 +10,13 @@ body {
   --font-default: var(--default-font);
   --font-monospace: "JetBrains Mono", monospace;
   --font-sans: var(--default-font), sans-serif;
-  --font-serif: "Lora", serif;
-  --font-serif-book: "Lora", serif;
+  --font-serif: "Marko One", serif;
+  --font-serif-book: "Marko One", serif;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
 
   --font-preview: var(--font-default);
-  --font-preview-header: var(--font-default);
+  --font-preview-header: var(--font-serif);
   --font-preview-book: var(--font-serif-book);
   --font-preview-book-header: var(--font-serif-book);
   --font-editor: var(--font-monospace);

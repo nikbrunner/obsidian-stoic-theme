@@ -8,13 +8,14 @@ body {
 
     // Inactive panes
     & > .workspace-leaf {
-      @include style-box-shadow($hidden: true);
+      // @include style-box-shadow($hidden: true);
+      box-shadow: none;
 
       backdrop-filter: blur(3px);
       transition: all $trans-fast $ease-out-expo;
 
       & > .workspace-leaf-content {
-        opacity: 0.95;
+        opacity: 1;
 
         .view-header {
           background: var(--background-primary);
@@ -32,7 +33,7 @@ body {
 
       // Active panes
       &.mod-active {
-        @include style-box-shadow();
+        // @include style-box-shadow();
 
         & > .workspace-leaf-content {
           opacity: 1;
