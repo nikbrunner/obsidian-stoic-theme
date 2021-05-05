@@ -1,14 +1,13 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Galdeano&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Marko+One&display=swap");
 body {
   --default-font: "Galdeano", "Helvetica", -apple-system, BlinkMacSystemFont,
     Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --font-default: var(--default-font);
   --font-monospace: "JetBrains Mono", monospace;
   --font-sans: var(--default-font), sans-serif;
-  --font-serif: "Marko One", serif;
-  --font-serif-book: "Marko One", serif;
+  --font-serif: var(--default-font);
+  --font-serif-book: var(--default-font);
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
   --font-preview: var(--font-default);
